@@ -61,7 +61,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <div style="margin-top: -80px;">
   <h1 class="w3-margin w3-xxlarge">Luonnonvoima</h1>
   <p class="w3-large">Chocolate Mushroom bars</p>
-  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Order Now</button>
+  <button href="order.php" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Order Now</button>
   </div>
 </header>
 
