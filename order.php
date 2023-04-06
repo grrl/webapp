@@ -55,9 +55,7 @@ var special = 1;
 
 function reduce_value(selection) {
 
-  console.log("in here");
-
-  if (selection == "regular") {
+  if (selection === "regular") {
    if (regular > 0){
       regular--;
       document.getElementById("reg").innerHTML = "&nbsp;" + regular + "&nbsp;";
@@ -73,16 +71,14 @@ function reduce_value(selection) {
 
 function increase_value(selection) {
 
-  console.log("in here");
-
-  if (selection == "regular") {
+  if (selection === "regular") {
    if (regular < 10){
       regular++;
       document.getElementById("reg").innerHTML = "&nbsp;" + regular + "&nbsp;";
    }
   }
   else {
-  if (regular < 10){
+  if (special < 10){
       special++;
       document.getElementById("spe").innerHTML = "&nbsp;" + special + "&nbsp;";
    }
@@ -126,15 +122,15 @@ function increase_value(selection) {
   Website: <input type="text" name="website">
   <p>
   Order regular:
-  <button type="button" style="width:50px;font-size:20px;font-weight: bold;" onclick="reduce_value(regular)">-</button>
+  <button type="button" id="regular_reduce" style="width:50px;font-size:20px;font-weight: bold;" onclick="reduce_value('regular')">-</button>
   <span id="reg">&nbsp;1&nbsp;</span>
-  <button type="button" style="width:50px;font-size:20px;font-weight: bold;" onclick="increase_value(regular)">+</button>
+  <button type="button" id="regular_increase" style="width:50px;font-size:20px;font-weight: bold;" onclick="increase_value('regular')">+</button>
   </p>
   <p>
   Order special:&nbsp;
-  <button type="button" style="width:50px;font-size:20px;font-weight: bold;" onclick="reduce_value(special)">-</button>
+  <button type="button" id="special_reduce" style="width:50px;font-size:20px;font-weight: bold;" onclick="reduce_value('special')">-</button>
   <span id="spe">&nbsp;1&nbsp;</span>
-  <button type="button" style="width:50px;font-size:20px;font-weight: bold;" onclick="increase_value(special)">+</button>
+  <button type="button" id="special_increase" style="width:50px;font-size:20px;font-weight: bold;" onclick="increase_value('special')">+</button>
   </p>
   Comment: <textarea name="comment" rows="5" cols="40"></textarea>
   <br><br>
