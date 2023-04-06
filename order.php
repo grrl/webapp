@@ -50,11 +50,19 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </style>
 <script type="text/javascript">
 
+function reduce_value(){
+
+
+}
+
+function increase_value(){
+
+  
+}
 
 </script>
 </head>
 <body>
-
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-sand w3-card w3-left-align w3-large">
