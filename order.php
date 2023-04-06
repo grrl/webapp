@@ -53,14 +53,30 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 var regular = 1;
 var special = 1;
 
-function reduce_value(){
+function reduce_value(selection){
 
-
+  if (selection == "regular") {
+   if (regular != 0){
+      regular--;
+   }
+  }
+  else {
+    if (special != 0){
+      special--;
+    }
+  }
 }
 
 function increase_value(){
 
+  if (selection == "regular") {
+   if (regular != 0){
+      regular--;
+   }
+  }
+  else {
 
+  }
 }
 
 </script>
