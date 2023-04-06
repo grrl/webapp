@@ -1,6 +1,6 @@
 <?php
 
-
+/*
 $servername = "localhost";
 $username = "id20561241_kamisama_user";
 $password = "q~?5g]Z8R|F?5)Rx";
@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 }
 //echo "Connected successfully";
 echo "<script>alert('Success!');</script>";
-
+*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
