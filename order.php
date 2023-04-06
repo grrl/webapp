@@ -50,6 +50,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </style>
 <script type="text/javascript">
 
+var regular = 1;
+var special = 1;
+
 function reduce_value(){
 
 
@@ -57,7 +60,7 @@ function reduce_value(){
 
 function increase_value(){
 
-  
+
 }
 
 </script>
