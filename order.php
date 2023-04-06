@@ -53,29 +53,35 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 var regular = 1;
 var special = 1;
 
-function reduce_value(selection){
+function reduce_value(selection) {
+
+  console.log("in here");
 
   if (selection == "regular") {
-   if (regular != 0){
+   if (regular > 0){
       regular--;
    }
   }
   else {
-    if (special != 0){
+    if (special > 0){
       special--;
     }
   }
 }
 
-function increase_value(){
+function increase_value(selection) {
+
+  console.log("in here");
 
   if (selection == "regular") {
-   if (regular != 0){
-      regular--;
+   if (regular < 10){
+      regular++;
    }
   }
   else {
-
+  if (regular < 10){
+      special++;
+   }
   }
 }
 
@@ -116,15 +122,15 @@ function increase_value(){
   Website: <input type="text" name="website">
   <p>
   Order regular:
-  <button style="width:50px;font-size:20px;font-weight: bold;">-</button>
+  <button type="button" style="width:50px;font-size:20px;font-weight: bold;" onclick="reduce_value(regular)">-</button>
   &nbsp;1&nbsp;
-  <button style="width:50px;font-size:20px;font-weight: bold;">+</button>
+  <button type="button" style="width:50px;font-size:20px;font-weight: bold;" onclick="increase_value(regular)">+</button>
   </p>
   <p>
   Order special:&nbsp;
-  <button style="width:50px;font-size:20px;font-weight: bold;">-</button>
+  <button type="button" style="width:50px;font-size:20px;font-weight: bold;" onclick="reduce_value(special)">-</button>
   &nbsp;1&nbsp;
-  <button style="width:50px;font-size:20px;font-weight: bold;">+</button>
+  <button type="button" style="width:50px;font-size:20px;font-weight: bold;" onclick="increase_value(special)">+</button>
   </p>
   Comment: <textarea name="comment" rows="5" cols="40"></textarea>
   <br><br>
