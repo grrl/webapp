@@ -60,11 +60,13 @@ function reduce_value(selection) {
   if (selection == "regular") {
    if (regular > 0){
       regular--;
+      document.getElementById("reg").innerHTML = "&nbsp;" + regular + "&nbsp;";
    }
   }
   else {
     if (special > 0){
       special--;
+      document.getElementById("spe").innerHTML = "&nbsp;" + special + "&nbsp;";
     }
   }
 }
@@ -76,11 +78,13 @@ function increase_value(selection) {
   if (selection == "regular") {
    if (regular < 10){
       regular++;
+      document.getElementById("reg").innerHTML = "&nbsp;" + regular + "&nbsp;";
    }
   }
   else {
   if (regular < 10){
       special++;
+      document.getElementById("spe").innerHTML = "&nbsp;" + special + "&nbsp;";
    }
   }
 }
@@ -123,13 +127,13 @@ function increase_value(selection) {
   <p>
   Order regular:
   <button type="button" style="width:50px;font-size:20px;font-weight: bold;" onclick="reduce_value(regular)">-</button>
-  &nbsp;1&nbsp;
+  <span id="reg">&nbsp;1&nbsp;</span>
   <button type="button" style="width:50px;font-size:20px;font-weight: bold;" onclick="increase_value(regular)">+</button>
   </p>
   <p>
   Order special:&nbsp;
   <button type="button" style="width:50px;font-size:20px;font-weight: bold;" onclick="reduce_value(special)">-</button>
-  &nbsp;1&nbsp;
+  <span id="spe">&nbsp;1&nbsp;</span>
   <button type="button" style="width:50px;font-size:20px;font-weight: bold;" onclick="increase_value(special)">+</button>
   </p>
   Comment: <textarea name="comment" rows="5" cols="40"></textarea>
