@@ -196,14 +196,16 @@ function author_function() {
 
 
     if (word == "") {
+        document.getElementById("author").style.border = "1px solid";
         document.getElementById("author").style.borderColor = "red";
         return;
     }
     else {
         //var document_string = "Added " + word;
         //document.title = document_string;
-        document.getElementById("author").style.borderColor = "rgb(221, 221, 221)";
-        document.getElementById("authors").style.color = "#000000";
+        document.getElementById("author").style.borderColor = "#767676";
+        document.getElementById("author").style.border = "1px solid";
+        document.getElementById("authors").style.color = "#545454";
     }
 
     authors.push(word);
@@ -232,7 +234,8 @@ function author_remove() {
 
 
     if (authors.length == 0) {
-        document.getElementById("authors").style.color = "#6c757d";
+        document.getElementById("authors").style.borderColor = "#767676";
+        document.getElementById("authors").style.border = "1px solid";
         document.getElementById("authors").value = "Add a group member";
     }
     else {
@@ -333,7 +336,7 @@ $.ajax({
       <h2>luonnonvoima order form</h2>
 <form method="post" action="process.php">
     
-  Full name: <input type="text" name="name" id="author" style="width:270px;">
+  Full name: <input type="text" name="name" id="author" style="width:270px;height:27.93px;">
   <p>
   <button type="button" id="clear_button" style="width:60px;font-size:10px;font-weight: bold;margin-left:20px" onclick="author_remove()">Remove last</button>
   <button type="button" id="add_button" style="width:60px;font-size:10px;font-weight: bold;margin-left: 175px;" onclick="author_function()">Add new</button>
