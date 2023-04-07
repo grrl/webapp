@@ -280,10 +280,10 @@ function author_remove() {
   Company: <input type="text" name="website" style="width:271px;">
   <br></br>
   Country: &nbsp;&nbsp;
-  <input list=languages>
-  <datalist id=languages>
-  <option value="English"></option>
-  <option value="Dutch"></option>
+  <input list=countries style="width:271px;">
+  <datalist id=countries>
+  <option value="Germany"></option>
+  <option value="Finland"></option>
   </datalist>
   <p>
   Order regular:
