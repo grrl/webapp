@@ -96,16 +96,30 @@ function reduce_value(selection) {
       document.getElementById("spe").innerHTML = "　" + special + "　";
     }
   }
-  document.getElementById("regulartotal").innerHTML = numberWithCommas(truncateDecimals(regular * 736.8, 2));
-  document.getElementById("specialtotal").innerHTML = numberWithCommas(truncateDecimals(special * 840, 2));
+
+  if (regular == "0")
+    document.getElementById("regulartotal").innerHTML = "　";
+  else
+    document.getElementById("regulartotal").innerHTML = numberWithCommas(truncateDecimals(regular * 736.8, 2));
+
+  if (special == "0")
+    document.getElementById("specialtotal").innerHTML = "　";
+  else
+    document.getElementById("specialtotal").innerHTML = numberWithCommas(truncateDecimals(special * 840, 2));
 
   document.getElementById("regularcount").innerHTML = regular + "x";
   document.getElementById("specialcount").innerHTML = special + "x";
   
   //calculate order total
-  var totalvalue = regular * 736.8 + special * 820;
-  document.getElementById("finalcost").innerHTML = numberWithCommas(truncateDecimals(regular * 736.8 + special * 820, 2));
-}
+  var totalvalue = regular * 736.8 + special * 840;
+  if (totalvalue == 0){
+    document.getElementById("placeorder").disabled = true;
+    document.getElementById("finalcost").innerHTML = "The shopping cart is empty";
+  }
+  else{
+    document.getElementById("placeorder").disabled = false;
+    document.getElementById("finalcost").innerHTML =  numberWithCommas(truncateDecimals(totalvalue, 2));
+  }}
 
 function increase_value(selection) {
 
@@ -122,15 +136,30 @@ function increase_value(selection) {
    }
   }
   
-  document.getElementById("regulartotal").innerHTML = numberWithCommas(truncateDecimals(regular * 736.8, 2));
-  document.getElementById("specialtotal").innerHTML = numberWithCommas(truncateDecimals(special * 840, 2));
+  if (regular == "0")
+    document.getElementById("regulartotal").innerHTML = "　";
+  else
+    document.getElementById("regulartotal").innerHTML = numberWithCommas(truncateDecimals(regular * 736.8, 2));
+
+  if (special == "0")
+    document.getElementById("specialtotal").innerHTML = "　";
+  else
+    document.getElementById("specialtotal").innerHTML = numberWithCommas(truncateDecimals(special * 840, 2));
 
   document.getElementById("regularcount").innerHTML = regular + "x";
   document.getElementById("specialcount").innerHTML = special + "x";
 
-  var totalvalue = regular * 736.8 + special * 820;
+  var totalvalue = regular * 736.8 + special * 840;
   //calculate order total
-  document.getElementById("finalcost").innerHTML =  numberWithCommas(truncateDecimals(regular * 736.8 + special * 840, 2));
+
+  if (totalvalue == 0){
+    document.getElementById("placeorder").disabled = true;
+    document.getElementById("finalcost").innerHTML = "The shopping cart is empty";
+  }
+  else{
+    document.getElementById("placeorder").disabled = false;
+    document.getElementById("finalcost").innerHTML =  numberWithCommas(truncateDecimals(totalvalue, 2));
+  }
 
 }
 
@@ -280,7 +309,7 @@ function author_remove() {
   </tr>
 </table>
 <br><br>
-<input type="submit" name="submit" value="Place order">  
+<input type="submit" id="placeorder" name="submit" value="Place order">  
 </form>
       <p class="w3-text-grey">No refunds. All sales are final.</p>
     </div>
