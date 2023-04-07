@@ -353,7 +353,7 @@ $.ajax({
   <p>
   Order regular:
   <button type="button" id="regular_reduce" style="width:50px;font-size:20px;font-weight: bold;" onclick="reduce_value('regular')">-</button>
-  <input id="reg" name="regular" value="1" type="text" style="width:30px;text-align: center;font-weight:bold;" readonly>
+  <input id="reg" name="regular" value="1" type="text" style="width:30px;text-align: center;font-weight:bold;background-color:#f8f8f8;border:1px solid #767676;" readonly>
   <button type="button" id="regular_increase" style="width:50px;font-size:20px;font-weight: bold;" onclick="increase_value('regular')">+</button>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="snackreg.png" class="thumbnail" height="50" width="60" style="display: inline-block;" /> 
@@ -361,7 +361,7 @@ $.ajax({
   <p>
   Order special:&nbsp;
   <button type="button" id="special_reduce" style="width:50px;font-size:20px;font-weight: bold;" onclick="reduce_value('special')">-</button>
-  <input id="spe" name="special" value="1" type="text" style="width:30px;text-align: center;font-weight:bold;" readonly>
+  <input id="spe" name="special" value="1" type="text" style="width:30px;text-align: center;font-weight:bold;background-color:#f8f8f8;border:1px solid #767676;" readonly>
   <button type="button" id="special_increase" style="width:50px;font-size:20px;font-weight: bold;" onclick="increase_value('special')">+</button>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="snackspe.png" class="thumbnail" height="50" width="60" style="display: inline-block;" /> 
