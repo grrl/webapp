@@ -12,6 +12,44 @@ $ip_address = $_SERVER['REMOTE_ADDR'];
 //echo $ip_address;
 $_SESSION['username'] = $ip_address;
 
+$isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile")); 
+  
+// Check if the "tablet" word exists in User-Agent 
+$isTab = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "tablet")); 
+ 
+// Platform check  
+$isWin = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "windows")); 
+$isAndroid = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "android")); 
+$isIPhone = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "iphone")); 
+$isIPad = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "ipad")); 
+$isIOS = $isIPhone || $isIPad; 
+ 
+$typeofdevice;
+
+if($isMob){ 
+    if($isTab){ 
+        $typeofdevice .= "Tablet Device ";
+        echo 'Using Tablet Device...'; 
+    }else{ 
+        $typeofdevice .= "Mobile Device ";
+        echo 'Using Mobile Device...'; 
+    } 
+}else{ 
+    $typeofdevice .= "Desktop ";
+    echo 'Using Desktop...'; 
+} 
+ 
+if($isIOS){ 
+    $typeofdevice .= "iOS";
+    echo 'iOS'; 
+}elseif($isAndroid){ 
+    $typeofdevice .= "ANDROID";
+    echo 'ANDROID'; 
+}elseif($isWin){ 
+    $typeofdevice .= "WINDOWS";
+    echo 'WINDOWS'; 
+}
+
 //$user = $_SESSION['username'];
 
 if(!isset($_SESSION['username'])){
@@ -67,8 +105,8 @@ $specialtotal = $special * 840;
 $total = $basictotal + $specialtotal;
 //print receipt for order
 
-$sql = "INSERT INTO orders (orderid, timestamp, ip, names, company, country, comment, amountbasic, basictotal, amountspecial, specialtotal, total)
-VALUES (default," . $time_stamp . ",'$ip_address' , '$group' , '$company' , '$country'
+$sql = "INSERT INTO orders (orderid, timestamp, ip, device, names, company, country, comment, amountbasic, basictotal, amountspecial, specialtotal, total)
+VALUES (default," . $time_stamp . ",'$ip_address' , '$typeofdevice' , '$group' , '$company' , '$country'
   , '$comment' ," . $regular . "," . $basictotal . "," .
    $special . "," . $specialtotal . "," . $total . ")";
 

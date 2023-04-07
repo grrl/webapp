@@ -245,8 +245,8 @@ function post_form() {
  let group = authors.toString();
  group.replace(/[^a-zA-Z0-9 ]/g, '');
 
- let company = document.getElementById("authors").value;
- company.replaceAll(",", " ");
+ let company = document.getElementById("companyname").value;
+ //company.replaceAll(",", " ");
  company.replace(/[^a-zA-Z0-9 ]/g, '');
 
  let country = document.getElementById("countrylist").value;
@@ -282,7 +282,7 @@ $.ajax({
   {
     //console.log("success");
     console.log("data " + data)
-    window.location='success.php';
+    //window.location='success.php';
   }
 });
 
@@ -328,7 +328,7 @@ $.ajax({
   <br>
   <textarea name="Text1" id="authors" cols="33" rows="3" style="margin-left: 53px;"disabled></textarea>
   <br></br>  
-  Company: <input type="text" name="website" style="width:271px;">
+  Company: <input type="text" id="companyname" name="website" style="width:271px;">
   <br></br>
   Country: &nbsp;&nbsp;
   <input list="countries" id="countrylist" style="width:271px;">
