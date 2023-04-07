@@ -236,6 +236,7 @@ function author_remove() {
     if (authors.length == 0) {
         document.getElementById("authors").style.borderColor = "#767676";
         document.getElementById("authors").style.border = "1px solid";
+        document.getElementById("authors").style.color = "#545454";
         document.getElementById("authors").value = "Add a group member";
     }
     else {
