@@ -62,7 +62,7 @@ cursor: pointer;
 
 /*change the number below to scale to the appropriate size*/ 
 .thumbnail:hover { 
-transform: scale(2.0); 
+transform: scale(3.5); 
 }
 </style>
 <script type="text/javascript">
@@ -247,7 +247,7 @@ function author_remove() {
   <span id="reg">　1　</span>
   <button type="button" id="regular_increase" style="width:50px;font-size:20px;font-weight: bold;" onclick="increase_value('regular')">+</button>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://i.pinimg.com/474x/18/f5/1c/18f51c1201510d08d2db33ebe7a00fda.jpg" class="thumbnail" height="50" width="50" style="display: inline-block;" /> 
+  <img src="snackreg.png" class="thumbnail" height="50" width="60" style="display: inline-block;" /> 
   </p>
   <p>
   Order special:&nbsp;
@@ -255,7 +255,7 @@ function author_remove() {
   <span id="spe">　1　</span>
   <button type="button" id="special_increase" style="width:50px;font-size:20px;font-weight: bold;" onclick="increase_value('special')">+</button>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://i.pinimg.com/474x/18/f5/1c/18f51c1201510d08d2db33ebe7a00fda.jpg" class="thumbnail" height="50" width="50" style="display: inline-block;" /> 
+  <img src="snackspe.png" class="thumbnail" height="50" width="60" style="display: inline-block;" /> 
 
   </p>
   Order remarks:
