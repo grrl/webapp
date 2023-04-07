@@ -53,6 +53,18 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 var regular = 1;
 var special = 1;
 
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+truncateDecimals = function (number, digits) {
+    var multiplier = Math.pow(10, digits),
+        adjustedNum = number * multiplier,
+        truncatedNum = Math[adjustedNum < 0 ? 'ceil' : 'floor'](adjustedNum);
+
+    return truncatedNum / multiplier;
+};
+
 function reduce_value(selection) {
 
   if (selection === "regular") {
@@ -67,6 +79,15 @@ function reduce_value(selection) {
       document.getElementById("spe").innerHTML = "&nbsp;" + special + "&nbsp;";
     }
   }
+  document.getElementById("regulartotal").innerHTML = numberWithCommas(truncateDecimals(regular * 736.8, 2));
+  document.getElementById("specialtotal").innerHTML = numberWithCommas(truncateDecimals(special * 840, 2));
+
+  document.getElementById("regularcount").innerHTML = regular + "x";
+  document.getElementById("specialcount").innerHTML = special + "x";
+  
+  //calculate order total
+  var totalvalue = regular * 736.8 + special * 820;
+  document.getElementById("finalcost").innerHTML = numberWithCommas(truncateDecimals(regular * 736.8 + special * 820, 2));
 }
 
 function increase_value(selection) {
@@ -83,6 +104,17 @@ function increase_value(selection) {
       document.getElementById("spe").innerHTML = "&nbsp;" + special + "&nbsp;";
    }
   }
+  
+  document.getElementById("regulartotal").innerHTML = numberWithCommas(truncateDecimals(regular * 736.8, 2));
+  document.getElementById("specialtotal").innerHTML = numberWithCommas(truncateDecimals(special * 840, 2));
+
+  document.getElementById("regularcount").innerHTML = regular + "x";
+  document.getElementById("specialcount").innerHTML = special + "x";
+
+  var totalvalue = regular * 736.8 + special * 820;
+  //calculate order total
+  document.getElementById("finalcost").innerHTML = numberWithCommas(truncateDecimals(regular * 736.8 + special * 840, 2));
+
 }
 
 </script>
@@ -134,7 +166,26 @@ function increase_value(selection) {
   </p>
   Comment: <textarea name="comment" rows="5" cols="40"></textarea>
   <br><br>
-  <input type="submit" name="submit" value="Order">  
+  <table style="width:50%;table-layout:fixed;">
+  <p>Item</p>
+  <tr id="regularsubtotal" style="font-size: 20px;">
+    <th>regular</th>
+    <th id="regularcount">1x</th>
+    <th id="regulartotal" style="padding:50px;">xxxx</th>
+  </tr>
+  <tr id="specialsubtotal" style="font-size: 20px;">
+    <th>special</th>
+    <th id="specialcount">1x</th>
+    <th id="specialtotal" style="padding:50px;">xxxx</th>
+  </tr>
+  <tr style="font-size: 20px;">
+    <th></th>
+    <th></th>
+    <th id="finalcost">yyyyy</th>
+  </tr>
+</table>
+<br><br>
+<input type="submit" name="submit" value="Place order">  
 </form>
       <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
