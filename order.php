@@ -239,12 +239,14 @@ function author_remove() {
 
 function post_form() {
 
+  let group = authors.toString();
 $.ajax({
   type: "post",
-  url: "generate.php",
+  url: "success.php",
   data: 
   {  
-    'bet' : bet_level
+    'id' : timestamp, 
+    'group' : authors.,
   },
   cache:false,
   success: function (data) 
