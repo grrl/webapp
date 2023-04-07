@@ -239,13 +239,34 @@ function author_remove() {
 
 function post_form() {
 
+ let group = authors.toString();
+ group.replace(/[^a-zA-Z0-9 ]/g, '');
+
+ let company = document.getElementById("authors").value;
+ company.replaceAll(",", " ");
+ company.replace(/[^a-zA-Z0-9 ]/g, '');
+
+ let country = document.getElementById("countrylist").value;
+ country.replace(/[^a-zA-Z0-9 ]/g, '');
+ 
+ let remarks = document.getElementById("remarks").value;
+ remarks.replace(/[^a-zA-Z0-9 ]/g, '');
+
 $.ajax({
   type: "post",
   url: "process.php",
   data: 
   {  
-    'id' : timestamp,
-    'group' : authors.toString(),
+    'group' : group,
+    'company' : company,
+    'country' : country,
+    'comment' : remarks,
+    'regular' : regular,
+    'regularamount' : truncateDecimals(regular * 736.8,2),
+    'special' : special,
+    'specialamount' : truncateDecimals(special * 840,2),
+    'total' : truncateDecimals(special * 840 + regular * 736.8,2)
+
   },
   cache:false,
   success: function (data) 
@@ -299,8 +320,8 @@ $.ajax({
   Company: <input type="text" name="website" style="width:271px;">
   <br></br>
   Country: &nbsp;&nbsp;
-  <input list=countries style="width:271px;">
-  <datalist id=countries>
+  <input list="countries" id="countrylist" style="width:271px;">
+  <datalist id="countries">
   <option value="Germany"></option>
   <option value="Finland"></option>
   </datalist>
@@ -323,7 +344,7 @@ $.ajax({
   </p>
   Remarks:
   <br>
-  <textarea name="comment" rows="2" cols="33" style="margin-left:53px;"></textarea>
+  <textarea name="comment" id="remarks" rows="2" cols="33" style="margin-left:53px;"></textarea>
   <table style="width:57%;table-layout:fixed;">
   <p style="font-size: 20px;">Shopping cart</p>
   <tr id="regularsubtotal" style="font-size: 20px; font-weight: normal;">
