@@ -1,44 +1,97 @@
 <?php
 
+session_start();
+
+$date = new DateTimeImmutable();
+//echo date_timestamp_get($date);
+$time_stamp = date_timestamp_get($date);
+
+//echo $time_stamp;
+$ip_address = $_SERVER['REMOTE_ADDR'];
+//echo " x ";
+//echo $ip_address;
+$_SESSION['username'] = $ip_address;
+
+//$user = $_SESSION['username'];
+
+if(!isset($_SESSION['username'])){
+   die(header("location: 404.php"));
+}
+
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "game";
+$database = "id20561241_kamisama";
 
-// Create connection
-$db = new mysqli($servername, $username, $password, $dbname);
-//if ($conn->connect_error) {
-//    //die("Connection failed: " . $conn->connect_error);
-//}
+$conn = new mysqli($servername, $username, $password, $database);
 
-if($db)
-{
-  if(isset($_POST['login_btn']))
-  {
-      //use orderid as session id
-      $username=mysqli_real_escape_string($db,$_POST['username']);
-      $password=mysqli_real_escape_string($db,$_POST['password']);
-      $password=md5($password); //Remember we hashed password before storing last time
-      $id = "id";
-      $sql="SELECT " . $id . " FROM users WHERE  username='$username' AND password='$password'";
-      $result=mysqli_query($db,$sql);
-      
-      if($result)
-      {
-     
-        if( mysqli_num_rows($result)>=1)
-        {
-            $_SESSION['message']="Your order has been processed.";
-            $_SESSION['username']=$username;
-            //$_SESSION['id']= $id;
-            header("location:home.php");
-        }
-       else
-       {
-              $_SESSION['message']="Username and Password combiation incorrect";
-              header("location:login.php");
-       }
-      }
-  }
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
+
+$group;
+$company;
+$country;
+$comment;
+$regular;
+$special;
+
+foreach ($_POST as $param_name => $param_val) {
+
+    switch ($param_name){
+
+        case "group":
+        $group = $param_val;
+        break;
+        case "company":
+        $company = $param_val;
+        break;
+        case "country":
+        $country = $param_val;
+        break;
+        case "comment":
+        $comment = $param_val;
+        break;
+        case "regular":
+        $regular = $param_val;
+        break;
+        case "special":
+        $special = $param_val;
+        break;
+    }
+}
+
+$basictotal = $regular * 736.8;
+$specialtotal = $special * 840;
+$total = $basictotal + $specialtotal;
+//print receipt for order
+
+$sql = "INSERT INTO orders (orderid, timestamp, ip, names, company, country, comment, amountbasic, basictotal, amountspecial, specialtotal, total)
+VALUES (default," . $time_stamp . ",'$ip_address' , '$group' , '$company' , '$country'
+  , '$comment' ," . $regular . "," . $basictotal . "," .
+   $special . "," . $specialtotal . "," . $total . ")";
+
+
+//$sql = "INSERT INTO orders (orderid) VALUES (0)";
+
+//$sql = "INSERT INTO order (ip) VALUES (0)";
+
+if ($conn->query($sql) === TRUE) {
+  //echo "New record created successfully";
+} else {
+  //echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$orderid = mysqli_insert_id($conn);
+
+//echo " ";
+//echo $sql;
+//$_SESSION['message']="You are now logged in"; 
+//$_SESSION['username']=$username;
+$conn->close();
+
+
+
+
 ?>

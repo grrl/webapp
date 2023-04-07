@@ -16,6 +16,7 @@ if ($conn->connect_error) {
 echo "<script>alert('Success!');</script>";
 */
 
+/*
 $name = $email = $comment = $website = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -31,7 +32,7 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
-
+*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -239,6 +240,8 @@ function author_remove() {
 
 function post_form() {
 
+  console.log("posting form");
+
  let group = authors.toString();
  group.replace(/[^a-zA-Z0-9 ]/g, '');
 
@@ -252,6 +255,12 @@ function post_form() {
  let remarks = document.getElementById("remarks").value;
  remarks.replace(/[^a-zA-Z0-9 ]/g, '');
 
+ console.log("ajax starting");
+ console.log(group);
+ console.log(company);
+ console.log(country);
+ console.log(remarks);
+
 $.ajax({
   type: "post",
   url: "process.php",
@@ -262,16 +271,18 @@ $.ajax({
     'country' : country,
     'comment' : remarks,
     'regular' : regular,
-    'regularamount' : truncateDecimals(regular * 736.8,2),
-    'special' : special,
-    'specialamount' : truncateDecimals(special * 840,2),
-    'total' : truncateDecimals(special * 840 + regular * 736.8,2)
+    //'regularamount' : truncateDecimals(regular * 736.8,2),
+    'special' : special
+    //'specialamount' : truncateDecimals(special * 840,2),
+    //'total' : truncateDecimals(special * 840 + regular * 736.8,2)
 
   },
   cache:false,
   success: function (data) 
   {
-    
+    //console.log("success");
+    console.log("data " + data)
+    window.location='success.php';
   }
 });
 
@@ -364,7 +375,7 @@ $.ajax({
   </tr>
 </table>
 <br>
-<input type="submit" id="placeorder" name="submit" value="Place order">  
+<input type="button" id="placeorder" name="submit" onclick="post_form()" value="Place order">  
 </form>
       <p class="w3-text-grey">No refunds. All sales are final.</p>
     </div>
