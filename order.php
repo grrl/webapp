@@ -163,7 +163,7 @@ function author_remove() {
 
     if (authors.length == 0) {
         document.getElementById("authors").style.color = "#6c757d";
-        document.getElementById("authors").value = "No authors yet";
+        document.getElementById("authors").value = "Add a group member";
     }
     else {
         var keywords_text = "";
@@ -210,7 +210,7 @@ function author_remove() {
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-twothird">
-      <h1>Order form</h1>
+      <h1>Order here</h1>
       <h2>luonnonvoima order form</h2>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
     
@@ -219,9 +219,11 @@ function author_remove() {
   <button type="button" id="clear_button" style="width:60px;font-size:10px;font-weight: bold;margin-left:20px" onclick="author_remove()">Remove last</button>
   <button type="button" id="add_button" style="width:60px;font-size:10px;font-weight: bold;margin-left: 175px;" onclick="author_function()">Add new</button>
   </p>
-  <label for="authors">Names:</label>
-  <input type="text" id="authors" name="lname" style="width:290px;"disabled><br><br>  
-  Company: <input type="text" name="website" style="width:275px;">
+  <label for="authors">Group names:</label>
+  <br>
+  <textarea name="Text1" id="authors" cols="33" rows="3" style="margin-left: 53px;"disabled></textarea>
+  <br></br>  
+  Company: <input type="text" name="website" style="width:271px;">
   <p>
   Order regular:
   <button type="button" id="regular_reduce" style="width:50px;font-size:20px;font-weight: bold;" onclick="reduce_value('regular')">-</button>
@@ -234,16 +236,18 @@ function author_remove() {
   <span id="spe">&nbsp;1&nbsp;</span>
   <button type="button" id="special_increase" style="width:50px;font-size:20px;font-weight: bold;" onclick="increase_value('special')">+</button>
   </p>
-  Comment: <textarea name="comment" rows="5" cols="31"></textarea>
+  Order remarks:
+  <br>
+  <textarea name="comment" rows="2" cols="33" style="margin-left:53px;"></textarea>
   <table style="width:50%;table-layout:fixed;">
   <p style="font-size: 20px;">Shopping cart</p>
   <tr id="regularsubtotal" style="font-size: 20px; font-weight: normal;">
-    <th>regular</th>
+    <th>Regular</th>
     <th id="regularcount">1x</th>
     <th id="regulartotal" style="padding:5px;">xxxx</th>
   </tr>
   <tr id="specialsubtotal" style="font-size: 20px; font-weight: normal;">
-    <th>special</th>
+    <th>Special</th>
     <th id="specialcount">1x</th>
     <th id="specialtotal" style="padding:5px;">xxxx</th>
   </tr>
