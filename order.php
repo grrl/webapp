@@ -340,7 +340,7 @@ $.ajax({
   </p>
   <label for="authors">Group names:</label>
   <br>
-  <input type="text" name="Text1" id="authors" style="width:340px;"disabled>
+  <input type="text" name="group" id="authors" style="width:340px;"disabled>
   <br></br>  
   Company: <input type="text" id="companyname" name="company" style="width:271px;">
   <br></br>
@@ -353,7 +353,7 @@ $.ajax({
   <p>
   Order regular:
   <button type="button" id="regular_reduce" style="width:50px;font-size:20px;font-weight: bold;" onclick="reduce_value('regular')">-</button>
-  <input id="reg" value="1" style="width:30px;text-align: center;font-weight:bold;" disabled>
+  <input id="reg" name="regular" value="1" type="text" style="width:30px;text-align: center;font-weight:bold;" disabled>
   <button type="button" id="regular_increase" style="width:50px;font-size:20px;font-weight: bold;" onclick="increase_value('regular')">+</button>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="snackreg.png" class="thumbnail" height="50" width="60" style="display: inline-block;" /> 
@@ -361,7 +361,7 @@ $.ajax({
   <p>
   Order special:&nbsp;
   <button type="button" id="special_reduce" style="width:50px;font-size:20px;font-weight: bold;" onclick="reduce_value('special')">-</button>
-  <input id="spe" value="1" type="text" style="width:30px;text-align: center;font-weight:bold;" disabled>
+  <input id="spe" name="special" value="1" type="text" style="width:30px;text-align: center;font-weight:bold;" disabled>
   <button type="button" id="special_increase" style="width:50px;font-size:20px;font-weight: bold;" onclick="increase_value('special')">+</button>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="snackspe.png" class="thumbnail" height="50" width="60" style="display: inline-block;" /> 

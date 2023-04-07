@@ -67,12 +67,12 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$group = $_POST['authormessage'];
+$group = $_POST['group'];
 $company= $_POST['company'];
 $country= $_POST['countries'];
-$comment= $_POST['message'];
-$regular= $_POST['regularfield'];
-$special= $_POST['specialfield'];
+$comment= $_POST['comment'];
+$regular= $_POST['regular'];
+$special= $_POST['special'];
 
 function clean($string) {
     //$string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.
