@@ -134,9 +134,7 @@ VALUES (default," . $time_stamp . ",'$ip_address' , '$typeofdevice' , '$group' ,
   , '$comment' ," . $regular . "," . $basictotal . "," .
    $special . "," . $specialtotal . "," . $total . ")";
 
-
 //$sql = "INSERT INTO orders (orderid) VALUES (0)";
-
 //$sql = "INSERT INTO order (ip) VALUES (0)";
 
 if ($conn->query($sql) === TRUE) {
@@ -146,6 +144,10 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $orderid = mysqli_insert_id($conn);
+
+$_SESSION['group'] = $group;
+$_SESSION['timestamp'] = $time_stamp;
+$_SESSION['id'] = $orderid;
 
 //echo " ";
 //echo $sql;
