@@ -278,6 +278,13 @@ function author_remove() {
   <textarea name="Text1" id="authors" cols="33" rows="3" style="margin-left: 53px;"disabled></textarea>
   <br></br>  
   Company: <input type="text" name="website" style="width:271px;">
+  <br></br>
+  Country: &nbsp;&nbsp;
+  <input list=languages>
+  <datalist id=languages>
+  <option value="English"></option>
+  <option value="Dutch"></option>
+  </datalist>
   <p>
   Order regular:
   <button type="button" id="regular_reduce" style="width:50px;font-size:20px;font-weight: bold;" onclick="reduce_value('regular')">-</button>
@@ -316,7 +323,7 @@ function author_remove() {
     <th id="finalcost" style="padding:0px;padding-bottom:1px;">1,576.8</th>
   </tr>
 </table>
-<br><br>
+<br>
 <input type="submit" id="placeorder" name="submit" value="Place order">  
 </form>
       <p class="w3-text-grey">No refunds. All sales are final.</p>
