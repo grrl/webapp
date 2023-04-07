@@ -89,13 +89,17 @@ function reduce_value(selection) {
   if (selection === "regular") {
    if (regular > 0){
       regular--;
-      document.getElementById("reg").innerHTML = "　" + regular + "　";
+      //document.getElementById("reg").value = "　" + regular + "　";
+      document.getElementById("reg").value = regular;
+      //document.getElementById("reg").innerHTML = regular;
    }
   }
   else {
     if (special > 0){
       special--;
-      document.getElementById("spe").innerHTML = "　" + special + "　";
+      //document.getElementById("spe").value = "　" + special + "　";
+      document.getElementById("spe").value = special;
+      //document.getElementById("spe").innerHTML = special;
     }
   }
 
@@ -111,6 +115,9 @@ function reduce_value(selection) {
 
   document.getElementById("regularcount").innerHTML = regular + "x";
   document.getElementById("specialcount").innerHTML = special + "x";
+
+  document.getElementsByName("specialfield").value = special;
+  document.getElementsByName("regularfield").value = regular;
   
   //calculate order total
   var totalvalue = regular * 736.8 + special * 840;
@@ -133,13 +140,17 @@ function increase_value(selection) {
   if (selection === "regular") {
    if (regular < 10){
       regular++;
-      document.getElementById("reg").innerHTML = "　" + regular + "　";
+      //document.getElementById("reg").value = "　" + regular + "　";
+      document.getElementById("reg").value = regular;
+      //document.getElementById("reg").innerHTML = regular;
    }
   }
   else {
   if (special < 10){
       special++;
-      document.getElementById("spe").innerHTML = "　" + special + "　";
+      document.getElementById("spe").value = special;
+      //document.getElementById("spe").innerHTML = special;
+      //document.getElementById("spe").value = "　" + special + "　";
    }
   }
   
@@ -155,6 +166,9 @@ function increase_value(selection) {
 
   document.getElementById("regularcount").innerHTML = regular + "x";
   document.getElementById("specialcount").innerHTML = special + "x";
+
+  document.getElementsByName("specialfield").value = special;
+  document.getElementsByName("regularfield").value = regular;
 
   var totalvalue = regular * 736.8 + special * 840;
   //calculate order total
@@ -317,7 +331,7 @@ $.ajax({
     <div class="w3-twothird">
       <h1>Order here</h1>
       <h2>luonnonvoima order form</h2>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+<form method="post" action="process.php">
     
   Full name: <input type="text" name="name" id="author" style="width:270px;">
   <p>
@@ -326,12 +340,12 @@ $.ajax({
   </p>
   <label for="authors">Group names:</label>
   <br>
-  <textarea name="Text1" id="authors" cols="33" rows="3" style="margin-left: 53px;"disabled></textarea>
+  <textarea name="Text1" id="authors" cols="33" rows="3" style="margin-left: 53px;"disabled><?php echo htmlspecialchars($authormessage); ?></textarea>
   <br></br>  
-  Company: <input type="text" id="companyname" name="website" style="width:271px;">
+  Company: <input type="text" id="companyname" name="company" style="width:271px;">
   <br></br>
   Country: &nbsp;&nbsp;
-  <input list="countries" id="countrylist" style="width:271px;">
+  <input list="countries" name="countries" id="countrylist" style="width:271px;">
   <datalist id="countries">
   <option value="Germany"></option>
   <option value="Finland"></option>
@@ -339,7 +353,7 @@ $.ajax({
   <p>
   Order regular:
   <button type="button" id="regular_reduce" style="width:50px;font-size:20px;font-weight: bold;" onclick="reduce_value('regular')">-</button>
-  <span id="reg">　1　</span>
+  <input id="reg" value="1" style="width:30px;" disabled>
   <button type="button" id="regular_increase" style="width:50px;font-size:20px;font-weight: bold;" onclick="increase_value('regular')">+</button>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="snackreg.png" class="thumbnail" height="50" width="60" style="display: inline-block;" /> 
@@ -347,15 +361,19 @@ $.ajax({
   <p>
   Order special:&nbsp;
   <button type="button" id="special_reduce" style="width:50px;font-size:20px;font-weight: bold;" onclick="reduce_value('special')">-</button>
-  <span id="spe">　1　</span>
+  <input id="spe" value="1" type="text" style="width:30px;" disabled>
   <button type="button" id="special_increase" style="width:50px;font-size:20px;font-weight: bold;" onclick="increase_value('special')">+</button>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="snackspe.png" class="thumbnail" height="50" width="60" style="display: inline-block;" /> 
-
   </p>
+  <label for="specialfield" type="hidden">1</label> 
+  <input type="hidden" name="specialfield" id="hiddenField" value="" /> 
+  <label for="regularfield" type="hidden">1</label> 
+  <input type="hidden" name="regularfield" id="hiddenField" value="" /> 
+
   Remarks:
   <br>
-  <textarea name="comment" id="remarks" rows="2" cols="33" style="margin-left:53px;"></textarea>
+  <textarea name="comment" id="remarks" rows="2" cols="33" style="margin-left:53px;"><?php echo htmlspecialchars($message); ?></textarea>
   <table style="width:57%;table-layout:fixed;">
   <p style="font-size: 20px;">Shopping cart</p>
   <tr id="regularsubtotal" style="font-size: 20px; font-weight: normal;">
@@ -375,7 +393,7 @@ $.ajax({
   </tr>
 </table>
 <br>
-<input type="button" id="placeorder" name="submit" onclick="post_form()" value="Place order">  
+<input type="submit" id="placeorder" name="submit" value="Place order">  
 </form>
       <p class="w3-text-grey">No refunds. All sales are final.</p>
     </div>

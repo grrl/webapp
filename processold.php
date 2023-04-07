@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
 session_start();
 $date = new DateTimeImmutable();
 //echo date_timestamp_get($date);
@@ -67,12 +67,37 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$group = $_POST['authormessage'];
-$company= $_POST['company'];
-$country= $_POST['countries'];
-$comment= $_POST['message'];
-$regular= $_POST['regularfield'];
-$special= $_POST['specialfield'];
+$group;
+$company;
+$country;
+$comment;
+$regular;
+$special;
+
+foreach ($_POST as $param_name => $param_val) {
+
+    switch ($param_name){
+
+        case "group":
+        $group = $param_val;
+        break;
+        case "company":
+        $company = $param_val;
+        break;
+        case "country":
+        $country = $param_val;
+        break;
+        case "comment":
+        $comment = $param_val;
+        break;
+        case "regular":
+        $regular = $param_val;
+        break;
+        case "special":
+        $special = $param_val;
+        break;
+    }
+}
 
 function clean($string) {
     //$string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.
@@ -139,6 +164,8 @@ $orderid = mysqli_insert_id($conn);
 //$_SESSION['username']=$username;
 $conn->close();
 
+
 header("Location: success.php");
+ob_end_flush();
 
 ?>
