@@ -24,7 +24,7 @@ $isIPhone = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "iphone")
 $isIPad = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "ipad")); 
 $isIOS = $isIPhone || $isIPad; 
  
-$typeofdevice;
+$typeofdevice = "";
 
 if($isMob){ 
     if($isTab){ 
