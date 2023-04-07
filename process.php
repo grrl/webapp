@@ -153,6 +153,6 @@ $orderid = mysqli_insert_id($conn);
 //$_SESSION['username']=$username;
 $conn->close();
 
-//header("Location: success.php");
+header("Location: success.php");
 
 ?>
