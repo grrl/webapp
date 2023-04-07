@@ -237,7 +237,7 @@ function author_remove() {
         document.getElementById("authors").style.borderColor = "#767676";
         document.getElementById("authors").style.border = "1px solid";
         document.getElementById("authors").style.color = "#545454";
-        document.getElementById("authors").value = "Add a group member";
+        document.getElementById("authors").value = "";
     }
     else {
         var keywords_text = "";
@@ -344,7 +344,7 @@ $.ajax({
   </p>
   <label for="authors">Group names:</label>
   <br>
-  <input type="text" name="group" id="authors" style="width:340px;background-color:#f8f8f8;border:1px solid #767676;caret-color: transparent !important;" onkeydown="return false;" required>
+  <input type="text" name="group" id="authors" placeholder="Add a member" style="width:340px;background-color:#f8f8f8;border:1px solid #767676;caret-color: transparent !important;" onkeydown="return false;" required>
   <br></br>  
   Company: <input type="text" id="companyname" name="company" style="width:271px;" required>
   <br></br>
