@@ -47,6 +47,23 @@ function test_input($data) {
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
+
+
+.thumbnail { 
+top:-50px; 
+left:-35px; 
+display:block; 
+z-index:999; 
+cursor: pointer; 
+-webkit-transition-property: all; 
+-webkit-transition-duration: 0.3s; 
+-webkit-transition-timing-function: ease; 
+} 
+
+/*change the number below to scale to the appropriate size*/ 
+.thumbnail:hover { 
+transform: scale(2.0); 
+}
 </style>
 <script type="text/javascript">
 
@@ -229,12 +246,17 @@ function author_remove() {
   <button type="button" id="regular_reduce" style="width:50px;font-size:20px;font-weight: bold;" onclick="reduce_value('regular')">-</button>
   <span id="reg">　1　</span>
   <button type="button" id="regular_increase" style="width:50px;font-size:20px;font-weight: bold;" onclick="increase_value('regular')">+</button>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://i.pinimg.com/474x/18/f5/1c/18f51c1201510d08d2db33ebe7a00fda.jpg" class="thumbnail" height="50" width="50" style="display: inline-block;" /> 
   </p>
   <p>
   Order special:&nbsp;
   <button type="button" id="special_reduce" style="width:50px;font-size:20px;font-weight: bold;" onclick="reduce_value('special')">-</button>
   <span id="spe">　1　</span>
   <button type="button" id="special_increase" style="width:50px;font-size:20px;font-weight: bold;" onclick="increase_value('special')">+</button>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://i.pinimg.com/474x/18/f5/1c/18f51c1201510d08d2db33ebe7a00fda.jpg" class="thumbnail" height="50" width="50" style="display: inline-block;" /> 
+
   </p>
   Order remarks:
   <br>
@@ -266,7 +288,7 @@ function author_remove() {
     </div>
 
     <div class="w3-third w3-center">
-      <img src="https://t3.ftcdn.net/jpg/01/73/71/14/360_F_173711487_qbRZkGHv1AD0y14x0jmV12F8G1dxcUbJ.jpg"> 
+      <!--<img src="https://t3.ftcdn.net/jpg/01/73/71/14/360_F_173711487_qbRZkGHv1AD0y14x0jmV12F8G1dxcUbJ.jpg">-->
       <!--<i class="fa fa-anchor w3-padding-64 w3-text-red"></i>-->
     </div>
   </div>
