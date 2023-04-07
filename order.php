@@ -113,9 +113,75 @@ function increase_value(selection) {
 
   var totalvalue = regular * 736.8 + special * 820;
   //calculate order total
-  document.getElementById("finalcost").innerHTML = numberWithCommas(truncateDecimals(regular * 736.8 + special * 840, 2));
+  document.getElementById("finalcost").innerHTML =  numberWithCommas(truncateDecimals(regular * 736.8 + special * 840, 2));
 
 }
+
+var authors = [];
+
+
+function author_function() {
+
+    var word = document.getElementById("author").value;
+
+
+    if (word == "") {
+        document.getElementById("author").style.borderColor = "red";
+        return;
+    }
+    else {
+        //var document_string = "Added " + word;
+        //document.title = document_string;
+        document.getElementById("author").style.borderColor = "rgb(221, 221, 221)";
+        document.getElementById("authors").style.color = "#000000";
+    }
+
+    authors.push(word);
+
+    var keywords_text = "";
+    var length = authors.length;
+    for (let index = 0; index < authors.length; ++index) {
+        const element = authors[index];
+        if (length == 1 || index == length - 1) {
+            keywords_text += element;
+        }
+        else {
+            keywords_text += element + ", ";
+        }
+    }
+    document.getElementById("authors").value = keywords_text;
+    document.getElementById("author").value = "";
+}
+
+function author_remove() {
+
+    if (authors.length > 0)
+        document.title = "Removed " + authors.pop();
+
+    //keywords.pop();
+
+
+    if (authors.length == 0) {
+        document.getElementById("authors").style.color = "#6c757d";
+        document.getElementById("authors").value = "No authors yet";
+    }
+    else {
+        var keywords_text = "";
+
+        for (let index = 0; index < authors.length; ++index) {
+            const element = authors[index];
+            if (authors.length == 1 || index == authors.length - 1) {
+                keywords_text += element;
+            }
+            else {
+                keywords_text += element + ", ";
+            }
+        }
+        document.getElementById("authors").value = keywords_text;
+
+    }
+}
+
 
 </script>
 </head>
@@ -145,13 +211,17 @@ function increase_value(selection) {
   <div class="w3-content">
     <div class="w3-twothird">
       <h1>Order form</h1>
-      <h2>PHP Form Validation Example</h2>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-  Name: <input type="text" name="name">
-  <br><br>
-  E-mail: <input type="text" name="email">
-  <br><br>
-  Website: <input type="text" name="website">
+      <h2>luonnonvoima order form</h2>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    
+  Full name: <input type="text" name="name" id="author" style="width:270px;">
+  <p>
+  <button type="button" id="clear_button" style="width:60px;font-size:10px;font-weight: bold;margin-left:20px" onclick="author_remove()">Remove last</button>
+  <button type="button" id="add_button" style="width:60px;font-size:10px;font-weight: bold;margin-left: 175px;" onclick="author_function()">Add new</button>
+  </p>
+  <label for="authors">Names:</label>
+  <input type="text" id="authors" name="lname" style="width:290px;"disabled><br><br>  
+  Company: <input type="text" name="website" style="width:275px;">
   <p>
   Order regular:
   <button type="button" id="regular_reduce" style="width:50px;font-size:20px;font-weight: bold;" onclick="reduce_value('regular')">-</button>
@@ -164,24 +234,23 @@ function increase_value(selection) {
   <span id="spe">&nbsp;1&nbsp;</span>
   <button type="button" id="special_increase" style="width:50px;font-size:20px;font-weight: bold;" onclick="increase_value('special')">+</button>
   </p>
-  Comment: <textarea name="comment" rows="5" cols="40"></textarea>
-  <br><br>
+  Comment: <textarea name="comment" rows="5" cols="31"></textarea>
   <table style="width:50%;table-layout:fixed;">
-  <p>Item</p>
-  <tr id="regularsubtotal" style="font-size: 20px;">
+  <p style="font-size: 20px;">Shopping cart</p>
+  <tr id="regularsubtotal" style="font-size: 20px; font-weight: normal;">
     <th>regular</th>
     <th id="regularcount">1x</th>
-    <th id="regulartotal" style="padding:50px;">xxxx</th>
+    <th id="regulartotal" style="padding:5px;">xxxx</th>
   </tr>
-  <tr id="specialsubtotal" style="font-size: 20px;">
+  <tr id="specialsubtotal" style="font-size: 20px; font-weight: normal;">
     <th>special</th>
     <th id="specialcount">1x</th>
-    <th id="specialtotal" style="padding:50px;">xxxx</th>
+    <th id="specialtotal" style="padding:5px;">xxxx</th>
   </tr>
   <tr style="font-size: 20px;">
     <th></th>
     <th></th>
-    <th id="finalcost">yyyyy</th>
+    <th id="finalcost" style="padding:0px;">yyyyy</th>
   </tr>
 </table>
 <br><br>
