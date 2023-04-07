@@ -112,14 +112,19 @@ function reduce_value(selection) {
   
   //calculate order total
   var totalvalue = regular * 736.8 + special * 840;
+
   if (totalvalue == 0){
     document.getElementById("placeorder").disabled = true;
-    document.getElementById("finalcost").innerHTML = "The shopping cart is empty";
+    document.getElementById("finalcost").innerHTML = "";
+    document.getElementById("emptymessage").innerHTML = "Shopping cart is empty";
+    emptymessage
   }
   else{
+    document.getElementById("emptymessage").innerHTML = "";
     document.getElementById("placeorder").disabled = false;
     document.getElementById("finalcost").innerHTML =  numberWithCommas(truncateDecimals(totalvalue, 2));
-  }}
+  }
+}
 
 function increase_value(selection) {
 
@@ -154,9 +159,12 @@ function increase_value(selection) {
 
   if (totalvalue == 0){
     document.getElementById("placeorder").disabled = true;
-    document.getElementById("finalcost").innerHTML = "The shopping cart is empty";
+    document.getElementById("finalcost").innerHTML = "";
+    document.getElementById("emptymessage").innerHTML = "Shopping cart is empty";
+    emptymessage
   }
   else{
+    document.getElementById("emptymessage").innerHTML = "";
     document.getElementById("placeorder").disabled = false;
     document.getElementById("finalcost").innerHTML =  numberWithCommas(truncateDecimals(totalvalue, 2));
   }
@@ -303,9 +311,9 @@ function author_remove() {
     <th id="specialtotal" style="padding:5px;">840</th>
   </tr>
   <tr style="font-size: 20px;">
+    <th id="emptymessage" style="white-space: nowrap;padding-left:100px;padding-bottom:0px;"></th>
     <th></th>
-    <th></th>
-    <th id="finalcost" style="padding:0px;">1,576.8</th>
+    <th id="finalcost" style="padding:0px;padding-bottom:1px;">1,576.8</th>
   </tr>
 </table>
 <br><br>
