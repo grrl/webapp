@@ -74,6 +74,18 @@ $comment= $_POST['comment'];
 $regular= $_POST['regular'];
 $special= $_POST['special'];
 
+echo $group;
+echo "\n";
+echo $company;
+echo "\n";
+echo $country;
+echo "\n";
+echo $comment;
+echo "\n";
+echo $regular;
+echo "\n";
+echo $special;
+
 function clean($string) {
     //$string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.
     $string = preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
@@ -139,6 +151,6 @@ $orderid = mysqli_insert_id($conn);
 //$_SESSION['username']=$username;
 $conn->close();
 
-header("Location: success.php");
+//header("Location: success.php");
 
 ?>
