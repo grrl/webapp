@@ -340,7 +340,7 @@ $.ajax({
   </p>
   <label for="authors">Group names:</label>
   <br>
-  <textarea name="Text1" id="authors" cols="33" rows="3" style="margin-left: 53px;"disabled><?php echo htmlspecialchars($authormessage); ?></textarea>
+  <input type="text" name="Text1" id="authors" style="width:340px;"disabled>
   <br></br>  
   Company: <input type="text" id="companyname" name="company" style="width:271px;">
   <br></br>
@@ -353,7 +353,7 @@ $.ajax({
   <p>
   Order regular:
   <button type="button" id="regular_reduce" style="width:50px;font-size:20px;font-weight: bold;" onclick="reduce_value('regular')">-</button>
-  <input id="reg" value="1" style="width:30px;" disabled>
+  <input id="reg" value="1" style="width:30px;text-align: center;font-weight:bold;" disabled>
   <button type="button" id="regular_increase" style="width:50px;font-size:20px;font-weight: bold;" onclick="increase_value('regular')">+</button>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="snackreg.png" class="thumbnail" height="50" width="60" style="display: inline-block;" /> 
@@ -361,19 +361,14 @@ $.ajax({
   <p>
   Order special:&nbsp;
   <button type="button" id="special_reduce" style="width:50px;font-size:20px;font-weight: bold;" onclick="reduce_value('special')">-</button>
-  <input id="spe" value="1" type="text" style="width:30px;" disabled>
+  <input id="spe" value="1" type="text" style="width:30px;text-align: center;font-weight:bold;" disabled>
   <button type="button" id="special_increase" style="width:50px;font-size:20px;font-weight: bold;" onclick="increase_value('special')">+</button>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="snackspe.png" class="thumbnail" height="50" width="60" style="display: inline-block;" /> 
   </p>
-  <label for="specialfield" type="hidden">1</label> 
-  <input type="hidden" name="specialfield" id="hiddenField" value="" /> 
-  <label for="regularfield" type="hidden">1</label> 
-  <input type="hidden" name="regularfield" id="hiddenField" value="" /> 
-
   Remarks:
   <br>
-  <textarea name="comment" id="remarks" rows="2" cols="33" style="margin-left:53px;"><?php echo htmlspecialchars($message); ?></textarea>
+  <input type="text" name="comment" id="remarks" style="width:340px;">
   <table style="width:57%;table-layout:fixed;">
   <p style="font-size: 20px;">Shopping cart</p>
   <tr id="regularsubtotal" style="font-size: 20px; font-weight: normal;">
