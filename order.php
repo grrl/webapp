@@ -258,7 +258,7 @@ function author_remove() {
   <img src="snackspe.png" class="thumbnail" height="50" width="60" style="display: inline-block;" /> 
 
   </p>
-  Order remarks:
+  Remarks:
   <br>
   <textarea name="comment" rows="2" cols="33" style="margin-left:53px;"></textarea>
   <table style="width:50%;table-layout:fixed;">
