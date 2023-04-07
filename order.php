@@ -70,13 +70,13 @@ function reduce_value(selection) {
   if (selection === "regular") {
    if (regular > 0){
       regular--;
-      document.getElementById("reg").innerHTML = "&nbsp;" + regular + "&nbsp;";
+      document.getElementById("reg").innerHTML = "　" + regular + "　";
    }
   }
   else {
     if (special > 0){
       special--;
-      document.getElementById("spe").innerHTML = "&nbsp;" + special + "&nbsp;";
+      document.getElementById("spe").innerHTML = "　" + special + "　";
     }
   }
   document.getElementById("regulartotal").innerHTML = numberWithCommas(truncateDecimals(regular * 736.8, 2));
@@ -95,13 +95,13 @@ function increase_value(selection) {
   if (selection === "regular") {
    if (regular < 10){
       regular++;
-      document.getElementById("reg").innerHTML = "&nbsp;" + regular + "&nbsp;";
+      document.getElementById("reg").innerHTML = "　" + regular + "　";
    }
   }
   else {
   if (special < 10){
       special++;
-      document.getElementById("spe").innerHTML = "&nbsp;" + special + "&nbsp;";
+      document.getElementById("spe").innerHTML = "　" + special + "　";
    }
   }
   
@@ -227,13 +227,13 @@ function author_remove() {
   <p>
   Order regular:
   <button type="button" id="regular_reduce" style="width:50px;font-size:20px;font-weight: bold;" onclick="reduce_value('regular')">-</button>
-  <span id="reg">&nbsp;1&nbsp;</span>
+  <span id="reg">　1　</span>
   <button type="button" id="regular_increase" style="width:50px;font-size:20px;font-weight: bold;" onclick="increase_value('regular')">+</button>
   </p>
   <p>
   Order special:&nbsp;
   <button type="button" id="special_reduce" style="width:50px;font-size:20px;font-weight: bold;" onclick="reduce_value('special')">-</button>
-  <span id="spe">&nbsp;1&nbsp;</span>
+  <span id="spe">　1　</span>
   <button type="button" id="special_increase" style="width:50px;font-size:20px;font-weight: bold;" onclick="increase_value('special')">+</button>
   </p>
   Order remarks:
