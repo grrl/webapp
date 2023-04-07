@@ -51,7 +51,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-twothird">
-      <h1>Order form</h1>
+      <h1>We have received your order</h1>
       <h2>Order complete, <?php echo $_SESSION['username']; ?></h2>
     tasfasfasdfadfuhadsfuihadfijuadfiasfu
     <table>

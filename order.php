@@ -346,10 +346,10 @@ $.ajax({
   <br>
   <input type="text" name="group" id="authors" placeholder="Enter a full name above and add new" style="width:340px;background-color:#f8f8f8;border:1px solid #767676;caret-color: transparent !important;" onkeydown="return false;" required>
   <br></br>  
-  Company: <input type="text" id="companyname" name="company" style="width:271px;" required>
+  Organization: <input type="text" id="companyname" name="company" style="width:248px;" required>
   <br></br>
-  Country: &nbsp;&nbsp;
-  <input list="countries" name="countries" id="countrylist" style="width:271px;" required>
+  Country: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input list="countries" name="countries" id="countrylist" style="width:248px;" required>
   <datalist id="countries">
   <option value="Germany"></option>
   <option value="Finland"></option>
