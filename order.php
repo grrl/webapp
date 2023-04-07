@@ -261,7 +261,7 @@ function author_remove() {
   Remarks:
   <br>
   <textarea name="comment" rows="2" cols="33" style="margin-left:53px;"></textarea>
-  <table style="width:50%;table-layout:fixed;">
+  <table style="width:57%;table-layout:fixed;">
   <p style="font-size: 20px;">Shopping cart</p>
   <tr id="regularsubtotal" style="font-size: 20px; font-weight: normal;">
     <th>Regular</th>
