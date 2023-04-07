@@ -74,6 +74,7 @@ $comment= $_POST['comment'];
 $regular= $_POST['regular'];
 $special= $_POST['special'];
 
+/*
 echo $group;
 echo "\n";
 echo $company;
@@ -85,6 +86,7 @@ echo "\n";
 echo $regular;
 echo "\n";
 echo $special;
+*/
 
 function clean($string) {
     //$string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.
