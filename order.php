@@ -65,6 +65,7 @@ cursor: pointer;
 transform: scale(3.5); 
 }
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript">
 
 var regular = 1;
@@ -234,6 +235,72 @@ function author_remove() {
         document.getElementById("authors").value = keywords_text;
 
     }
+}
+
+function post_form() {
+
+$.ajax({
+  type: "post",
+  url: "generate.php",
+  data: 
+  {  
+    'bet' : bet_level
+  },
+  cache:false,
+  success: function (data) 
+  {
+    let text = this.data;
+    console.log("data is " + data);
+    let mydata = JSON.parse(data);
+
+    winamount = mydata[0];
+    my_array = mydata[1];
+    timestamp = mydata[2];
+    //bonusname = mydata[2];
+
+    console.log(my_array);
+    if (winamount == "BONUS"){
+
+      bonustime = true;
+      bonusname = mydata[3];
+
+      switch (bonusname){
+
+      case "opal":
+        bonuscolor = "white";
+      break;
+      case "ruby":
+        bonuscolor = "#E0115F";
+      break;
+      case "emerald":
+        bonuscolor = "#50C878";
+      break;
+      case "sapphire":
+        bonuscolor = "#0f52ba";
+      break;
+      case "diamond":
+        bonuscolor = "#b9f2ff";
+      break;
+      }
+    }
+
+    document.getElementById("winlabel").innerHTML = "";
+    document.getElementById("gamestate").innerHTML = "GOOD LUCK!";
+
+    document.getElementById("play_button").disabled = true;
+    console.log("round starting here");
+    console.log(my_array);
+
+    //call draw plinkopath here
+    drawball = true;
+    move(my_array);
+    drawball = false;
+
+    //document.getElementById("loyalty").innerHTML = mytext + ", you have " + Math.floor(mydata.loyalty) + " points";
+    //document.getElementById("sessionpoints").innerHTML = "Session points: " + Math.floor(mydata.points);
+  }
+});
+
 }
 
 
