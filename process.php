@@ -68,11 +68,11 @@ if ($conn->connect_error) {
 }
 
 $group = $_POST['group'];
-$company= $_POST['company'];
-$country= $_POST['countries'];
-$comment= $_POST['comment'];
-$regular= $_POST['regular'];
-$special= $_POST['special'];
+$company = $_POST['company'];
+$country = $_POST['countries'];
+$comment = $_POST['comment'];
+$regular = $_POST['regular'];
+$special = $_POST['special'];
 
 /*
 echo $group;
