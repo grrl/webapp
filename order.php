@@ -266,25 +266,23 @@ function author_remove() {
   <tr id="regularsubtotal" style="font-size: 20px; font-weight: normal;">
     <th>Regular</th>
     <th id="regularcount">1x</th>
-    <th id="regulartotal" style="padding:5px;">xxxx</th>
+    <th id="regulartotal" style="padding:5px;">736.8</th>
   </tr>
   <tr id="specialsubtotal" style="font-size: 20px; font-weight: normal;">
     <th>Special</th>
     <th id="specialcount">1x</th>
-    <th id="specialtotal" style="padding:5px;">xxxx</th>
+    <th id="specialtotal" style="padding:5px;">840</th>
   </tr>
   <tr style="font-size: 20px;">
     <th></th>
     <th></th>
-    <th id="finalcost" style="padding:0px;">yyyyy</th>
+    <th id="finalcost" style="padding:0px;">1,576.8</th>
   </tr>
 </table>
 <br><br>
 <input type="submit" name="submit" value="Place order">  
 </form>
-      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p class="w3-text-grey">No refunds. All sales are final.</p>
     </div>
 
     <div class="w3-third w3-center">
