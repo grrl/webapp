@@ -89,7 +89,7 @@ tr:nth-child(even) {
   <tr>
     <td><?php echo $_SESSION['regular']; ?></td>
     <td><?php echo $_SESSION['special']; ?></td>
-    <td><?php echo $_SESSION['total']; ?></td>
+    <td><?php echo $_SESSION['total']; ?> €</td>
   </tr>
 </table>
     </div>
