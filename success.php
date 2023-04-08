@@ -23,6 +23,22 @@ else{
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
 </style>
 </head>
 <body>
@@ -52,43 +68,28 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <div class="w3-content">
     <div class="w3-twothird">
       <h1>We have received your order</h1>
-      <h2>Order complete, <?php echo $_SESSION['username']; ?></h2>
-    tasfasfasdfadfuhadsfuihadfijuadfiasfu
+      <h2>Order summary, <?php echo $_SESSION['username']; ?></h2>
+    You may now close this tab.
     <table>
   <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
+    <th>Order id</th>
+    <th>Time</th>
+    <th>Customer</th>
   </tr>
   <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
+    <td><?php echo $_SESSION['id']; ?></td>
+    <td><?php echo $_SESSION['timestamp']; ?></td>
+    <td><?php echo $_SESSION['group']; ?></td>
   </tr>
   <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
+    <th>Regular</th>
+    <th>Special</th>
+    <th>Total</th>
   </tr>
   <tr>
-    <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
-  </tr>
-  <tr>
-    <td>Island Trading</td>
-    <td>Helen Bennett</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Laughing Bacchus Winecellars</td>
-    <td>Yoshi Tannamuri</td>
-    <td>Canada</td>
-  </tr>
-  <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Giovanni Rovelli</td>
-    <td>Italy</td>
+    <td><?php echo $_SESSION['regular']; ?></td>
+    <td><?php echo $_SESSION['special']; ?></td>
+    <td><?php echo $_SESSION['total']; ?></td>
   </tr>
 </table>
     </div>

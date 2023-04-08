@@ -146,8 +146,11 @@ if ($conn->query($sql) === TRUE) {
 $orderid = mysqli_insert_id($conn);
 
 $_SESSION['group'] = $group;
-$_SESSION['timestamp'] = $time_stamp;
+$_SESSION['timestamp'] = date('m/d/Y H:i:s', $time_stamp);
 $_SESSION['id'] = $orderid;
+$_SESSION['regular'] = $basictotal;
+$_SESSION['special'] = $specialtotal;
+$_SESSION['total'] = $total;
 
 //echo " ";
 //echo $sql;
