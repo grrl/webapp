@@ -85,7 +85,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 Are you bored selling the same chocolates that are found in any store? Then come down to Luonnonvoima, we take pleasure in introducing to you our mushroom chocolate snacks. These are unique products that are made from functional mushroom powder ingredients to maintain the health of the body and mind.<br><br>
 Our mushroom chocolate bar is a delicious treat that combines the rich flavor of chocolate with the nutritious health benefits of mushrooms. It's gluten-free and eco-friendly. Perfect for anyone looking for a healthier alternative to traditional chocolate bars. <br><br>
 Our research indicates that our business is unique and will offer a significant advantage over all available similar and competing products. We have tested the product and it has passed the relevant certifications. We have not received any complaints about side effects.<br>
-Our snacks will help mitigate health conditions such as:<br>
+All of our snacks will help mitigate health conditions such as:<br>
 ● Alzheimer's<br>
 ● Heart disease<br>
 ● Cancer<br>
