@@ -51,9 +51,21 @@ if($isIOS){
 
 //$user = $_SESSION['username'];
 
+$regular = $_POST['regular'];
+$special = $_POST['special'];
+
+if (empty($regular) && empty($special)){
+    header("Location: index.php");
+}
+
 if(!isset($_SESSION['username'])){
    die(header("location: 404.php"));
 }
+
+$group = $_POST['group'];
+$company = $_POST['company'];
+$country = $_POST['countries'];
+$comment = $_POST['comment'];
 
 $servername = "localhost";
 $username = "root";
@@ -66,13 +78,6 @@ $conn = new mysqli($servername, $username, $password, $database);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
-$group = $_POST['group'];
-$company = $_POST['company'];
-$country = $_POST['countries'];
-$comment = $_POST['comment'];
-$regular = $_POST['regular'];
-$special = $_POST['special'];
 
 /*
 echo $group;
