@@ -57,21 +57,63 @@ tr:nth-child(even) {
 </div>
 
 <!-- First Grid -->
+
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-twothird">
-      <h1>We have received your order</h1>
-      <h2>Order summary</h2>
+      <h1>Product 1</h1>
+      <!--
+      <h5 class="w3-padding-32">
+      Are you bored selling the same chocolates that are found in any store? Then come down to Luonnonvoima, we take pleasure in introducing to you our mushroom chocolate snacks. These are unique products that are made from functional mushroom powder ingredients to maintain the health of the body and mind.
+      </h5>
+      -->
+      <p class="w3-text-grey">4-8-2023
+      <p>Dear Customer,<br><br>
+Are you bored selling the same chocolates that are found in any store? Then come down to Luonnonvoima, we take pleasure in introducing to you our mushroom chocolate snacks. These are unique products that are made from functional mushroom powder ingredients to maintain the health of the body and mind.<br><br>
+Our mushroom chocolate bar is a delicious treat that combines the rich flavor of chocolate with the nutritious health benefits of mushrooms. It's gluten-free and eco-friendly. Perfect for anyone looking for a healthier alternative to traditional chocolate bars. <br><br>
+Our research indicates that our business is unique and will offer a significant advantage over all available similar and competing products. We have tested the product and it has passed the relevant certifications. We have not received any complaints about side effects.<br>
+Every snack of ours will help mitigate health conditions such as:<br>
+● Alzheimer's<br>
+● Heart disease<br>
+● Cancer<br>
+● Diabetes</p>
+
+<p>These snacks are priced at a premium cost so that your customers can make them a part of their lifestyle over those unhealthy chocolates in the market. Featuring unique products all over Europe, we have a criterion for customers to purchase a minimum quantity of 10 boxes of the exact same item.</p>
+
+<p>We are sure that once your customers try our chocolate, they'll crave more. So, wait no more! Send us your form today! You'll be more than glad that you did!</p>
+
+<p>You may reach us via email or over the phone. We look forward to a long business relationship. <br>
 <br>
-You may now close this tab.
+Best regards,<br>
+Bilal Ktea<br>
+Sales Manager<br>
+</p>
+</p>
     </div>
+
     <div class="w3-third w3-center">
-      <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
+      <img src="productinfo.png">
     </div>
   </div>
 </div>
 
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+        <img src="productinfo2.png">
+    </div>
+    <div class="w3-twothird">
+      <h1>Product 2</h1>
+      <h5 class="w3-padding-32">We have made our treats even healthier</h5>
+      <p class="w3-text-grey"><p>In a world where health-consciousness is on the rise, the chocolate industry has been under increasing pressure to offer healthier options for consumers. In response to this demand, a new product has been introduced: a healthier version of our popular chocolate mushroom bar.</p>
 
+<p>The new chocolate mushroom bar boasts a much healthier recipe and has been reimagined with a dark chocolate base, brown sugar, plant-based milk alternatives. The new recipe has significantly reduced the sugar content while also increasing the nutritional value of the bar.</p>
+
+<p>The new chocolate mushroom bar is not only a healthier option for consumers but also maintains its signature delicious taste. With its high-quality ingredients and delicious taste, it's sure to become a new favorite for health-conscious chocolate choice everywhere.</p></p>
+    </div>
+  </div>
+</div>
 
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
     <h1 class="w3-margin w3-xlarge">Quote of the day: functional mushrooms for life</h1>
