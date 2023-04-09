@@ -77,16 +77,6 @@ Every snack of ours will help mitigate health conditions such as:<br>
 ● Heart disease<br>
 ● Cancer<br>
 ● Diabetes</p>
-
-<p>These snacks are priced at a premium cost so that your customers can make them a part of their lifestyle over those unhealthy chocolates in the market. Featuring unique products all over Europe, we have a criterion for customers to purchase a minimum quantity of 10 boxes of the exact same item.</p>
-
-<p>We are sure that once your customers try our chocolate, they'll crave more. So, wait no more! Send us your form today! You'll be more than glad that you did!</p>
-
-<p>You may reach us via email or over the phone. We look forward to a long business relationship. <br>
-<br>
-Best regards,<br>
-Bilal Ktea<br>
-Sales Manager<br>
 </p>
 </p>
     </div>
