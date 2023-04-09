@@ -3,7 +3,7 @@
 session_start();
 
 if(!isset($_SESSION['username'])){
-  die(header("location: connect.php"));
+  die(header("location: index.php"));
 }
 else{
   session_destroy();
