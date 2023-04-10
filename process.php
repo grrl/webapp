@@ -28,25 +28,25 @@ $typeofdevice = "";
 if($isMob){ 
     if($isTab){ 
         $typeofdevice .= "Tablet Device ";
-        echo 'Using Tablet Device...'; 
+        //echo 'Using Tablet Device...'; 
     }else{ 
         $typeofdevice .= "Mobile Device ";
-        echo 'Using Mobile Device...'; 
+        //echo 'Using Mobile Device...'; 
     } 
 }else{ 
     $typeofdevice .= "Desktop ";
-    echo 'Using Desktop...'; 
+    //echo 'Using Desktop...'; 
 } 
  
 if($isIOS){ 
     $typeofdevice .= "iOS";
-    echo 'iOS'; 
+    //echo 'iOS'; 
 }elseif($isAndroid){ 
     $typeofdevice .= "ANDROID";
-    echo 'ANDROID'; 
+    //echo 'ANDROID'; 
 }elseif($isWin){ 
     $typeofdevice .= "WINDOWS";
-    echo 'WINDOWS'; 
+    //echo 'WINDOWS'; 
 }
 
 //$user = $_SESSION['username'];
@@ -70,7 +70,7 @@ $comment = $_POST['comment'];
 $servername = "localhost";
 $username = "id20561241_kamisama_user";
 $password = "q~?5g]Z8R|F?5)Rx";
-$dbname = "id20561241_kamisama";
+$database = "id20561241_kamisama";
 
 /*
 $servername = "localhost";

@@ -72,9 +72,10 @@ tr:nth-child(even) {
       <div style="overflow-x:auto;">
 
     <?php
+
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "id20561241_kamisama_user";
+$password = "q~?5g]Z8R|F?5)Rx";
 $dbname = "id20561241_kamisama";
 
 // Create connection
