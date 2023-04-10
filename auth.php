@@ -1,8 +1,6 @@
 <?php
 session_start();
 
-echo "echoing \n";
-echo $_SESSION['admin'];
 if(isset($_SESSION['admin']))
 {
   header("location:admin.php");
@@ -13,8 +11,6 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "id20561241_kamisama";
-
-echo "logging in";
 
 // Create connection
 $db = new mysqli($servername, $username, $password, $dbname);
@@ -29,7 +25,6 @@ if($db)
       $username=mysqli_real_escape_string($db,$_POST['username']);
       $password=mysqli_real_escape_string($db,$_POST['password']);
       $password=md5($password); //Remember we hashed password before storing last time
-      echo $password;
       $id = "id";
       $sql="SELECT " . $id . " FROM users WHERE username='$username' AND password='$password'";
       $result=mysqli_query($db,$sql);
