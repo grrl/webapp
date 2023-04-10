@@ -36,9 +36,6 @@ td, th {
   padding: 8px;
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
 </style>
 </head>
 <body>
@@ -70,6 +67,7 @@ tr:nth-child(even) {
   <div class="w3-content">
     <div class="w3-twothird">
     <h1>Login</h1>
+    <p>
     <?php
     if(isset($_SESSION['message']))
     {
@@ -77,7 +75,8 @@ tr:nth-child(even) {
          unset($_SESSION['message']);
     }
     ?>
-    <form method="post" action="auth.php">
+    </p>
+   <form method="post" action="auth.php">
   <table>
      <tr>
            <td>Username : </td>
