@@ -6,6 +6,7 @@ if(!isset($_SESSION['username'])){
   die(header("location: index.php"));
 }
 else{
+
   session_destroy();
 }
 ?>
@@ -78,7 +79,10 @@ tr:nth-child(even) {
   <tr>
     <td><?php echo $_SESSION['id']; ?></td>
     <td><?php echo $_SESSION['timestamp']; ?></td>
-    <td><?php echo $_SESSION['group']; ?></td>
+    <td><?php $myvar = str_replace('-', ' ', $_SESSION['group']);
+    $myvar = str_replace('9', ',', $myvar);
+    echo $myvar;
+    ?></td>
   </tr>
   <tr>
     <th>Regular</th>

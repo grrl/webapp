@@ -122,12 +122,16 @@ function clean($string) {
     return preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
 } 
 
-clean($group);
-clean($company);
-clean($country);
-clean($comment);
-clean($regular);
-clean($special);
+
+
+$group = str_replace(' ', '-', $group);
+$group = str_replace(',', '9', $group);
+$group = preg_replace('/[^A-Za-z0-9\-]/', '', $group);
+$company = clean($company);
+$country = clean($country);
+$comment = clean($comment);
+$regular = clean($regular);
+$special = clean($special);
 
 $basictotal = $regular * 736.8;
 $specialtotal = $special * 840;
