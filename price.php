@@ -75,7 +75,7 @@ tr:nth-child(even) {
       ● In total 240 delicious luonnonvoima special bars in one box
     </div>
     <div class="w3-third w3-center">
-      <img src="options.png">
+      <img src="prices.png">
     </div>
   </div>
 </div>

@@ -43,7 +43,7 @@ tr:nth-child(even) {
     <a href="index.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
     <a href="order.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Order</a>
     <a href="product.php" class="w3-bar-item w3-button w3-padding-large w3-white">Products</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Prices</a>
+    <a href="price.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Prices</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Video</a>
   </div>
 
@@ -80,7 +80,7 @@ This chocolate bar is the ideal option for a guilt-free snack or a nutritious de
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-third w3-center">
-        <img src="productinfo2.png">
+        <img src="regular.png">
     </div>
     <div class="w3-twothird">
       <h1>Classic Regular</h1>
