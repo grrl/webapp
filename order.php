@@ -131,7 +131,7 @@ function reduce_value(selection) {
   else{
     document.getElementById("emptymessage").innerHTML = "";
     document.getElementById("placeorder").disabled = false;
-    document.getElementById("finalcost").innerHTML =  numberWithCommas(truncateDecimals(totalvalue, 2)) + " €";
+    document.getElementById("finalcost").innerHTML =   "<hr>" + numberWithCommas(truncateDecimals(totalvalue, 2)) + " €";
   }
 }
 
@@ -182,7 +182,7 @@ function increase_value(selection) {
   else{
     document.getElementById("emptymessage").innerHTML = "";
     document.getElementById("placeorder").disabled = false;
-    document.getElementById("finalcost").innerHTML =  numberWithCommas(truncateDecimals(totalvalue, 2))  + " €";
+    document.getElementById("finalcost").innerHTML =  "<hr>" + numberWithCommas(truncateDecimals(totalvalue, 2))  + " €";
   }
 
 }
@@ -389,7 +389,7 @@ $.ajax({
   <tr style="font-size: 20px;">
     <th id="emptymessage" style="white-space: nowrap;padding-left:100px;padding-bottom:0px;"></th>
     <th></th>
-    <th id="finalcost" style="padding:0px;padding-bottom:1px;white-space: nowrap;">1,576.8 €</th>
+    <th id="finalcost" style="padding:0px;padding-bottom:1px;white-space: nowrap;"><hr>1,576.8 €</th>
   </tr>
 </table>
 <br>
