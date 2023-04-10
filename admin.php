@@ -3,7 +3,7 @@
 session_start();
 
 if(!isset($_SESSION['admin'])){
-    //die(header("location: login.php"));
+    die(header("location: login.php"));
 }
 
 ?>
