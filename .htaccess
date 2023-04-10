@@ -2,15 +2,18 @@
 # HTID:21503063: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
 php_value display_errors 1
 # DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:21503063:
+
 RewriteEngine On
 
 # Unless directory, remove trailing slash
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([^/]+)/$ http://luonnonvoima.xyz/$1 [R=301,L]
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^([^/]+)/$ http://luonnonvoima.xyz/$1 [R=301,L]
 
 # Redirect external .php requests to extensionless URL
-RewriteCond %{THE_REQUEST} ^(.+)\.php([#?][^\ ]*)?\ HTTP/
-RewriteRule ^(.+)\.php$ http://luonnonvoima.xyz/$1 [R=301,L]
+#RewriteCond %{THE_REQUEST} ^(.+)\.php([#?][^\ ]*)?\ HTTP/
+#RewriteRule ^(.+)\.php$ http://luonnonvoima.xyz/$1 [R=301,L]
 
 # Resolve .php file for extensionless PHP URLs
-RewriteRule ^([^/.]+)$ $1.php [L]
+#RewriteRule ^([^/.]+)$ $1.php [L]
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule !.*\.php$ %{REQUEST_FILENAME}.php [QSA,L]
