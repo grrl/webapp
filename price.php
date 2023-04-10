@@ -63,14 +63,19 @@ tr:nth-child(even) {
     <div class="w3-twothird">
       <h1>Ordering options</h1>
       <p class="w3-text-grey">
-        <p>
-      ● Alzheimer's<br>
-● Heart disease<br>
-● Cancer<br>
-● Diabetes</p>
+      <p>
+      <b>Regular</b><br>
+      ● 10 boxes<br>
+      ● 30g*24 bars<br>
+      ● In total 240 delicious luonnonvoima bars in one box<br>
+      <br>
+      <b>Special</b><br>
+      ● 10 boxes<br>
+      ● 30g*24 bars<br>
+      ● In total 240 delicious luonnonvoima special bars in one box
     </div>
     <div class="w3-third w3-center">
-      <img src="productinfo.png">
+      <img src="options.png">
     </div>
   </div>
 </div>

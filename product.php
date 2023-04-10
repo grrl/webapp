@@ -61,12 +61,12 @@ tr:nth-child(even) {
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-twothird">
-      <h1>Classic Regular</h1>
+      <h1>"ExTrA" Special edition</h1>
       <p class="w3-text-grey">
-      <p>Enjoy the decadent and wholesome Regular Mushroom Chocolate Bar, a delectable treat for all chocolate connoisseurs.<br>
-This chocolate bar is the ideal combination of flavor and health because it is made with premium cocoa and infused with the goodness of mushrooms.<br><br>
-The regular mushroom chocolate bar features a balanced mix of mushrooms and cocoa, providing you with a delightful experience with every bite.<br>
-Whether you're looking for a snack to satisfy your sweet cravings or a healthy pick-me-up, this mushroom chocolate bar is the perfect choice.
+      <p>The ExTrA Mushroom Chocolate Bar is a delectable and wholesome treat that has a potent punch for people who want a bigger dose of the positive things that come from mushrooms.<br>
+This chocolate bar is a great option for those wishing to strengthen their immune system and general health because it contains even more mushrooms than our ordinary mushroom chocolate bar.<br><br>
+The ExTrA mushroom chocolate bar is the ideal choice for individuals who want to indulge in something sweet and healthy at the same time because it has a rich, chocolatey flavor with a more pronounced mushroom taste.<br>
+This chocolate bar is the ideal option for a guilt-free snack or a nutritious dessert because it delivers a blast of rich flavors and nutrients with every bite.
 </p>
     </div>
 
@@ -83,11 +83,11 @@ Whether you're looking for a snack to satisfy your sweet cravings or a healthy p
         <img src="productinfo2.png">
     </div>
     <div class="w3-twothird">
-      <h1>"ExTrA" Special edition</h1>
-      <p class="w3-text-grey"><p><p>The ExTrA Mushroom Chocolate Bar is a delectable and wholesome treat that has a potent punch for people who want a bigger dose of the positive things that come from mushrooms.<br>
-This chocolate bar is a great option for those wishing to strengthen their immune system and general health because it contains even more mushrooms than our ordinary mushroom chocolate bar.<br><br>
-The ExTrA mushroom chocolate bar is the ideal choice for individuals who want to indulge in something sweet and healthy at the same time because it has a rich, chocolatey flavor with a more pronounced mushroom taste.<br>
-This chocolate bar is the ideal option for a guilt-free snack or a nutritious dessert because it delivers a blast of rich flavors and nutrients with every bite.</p>
+      <h1>Classic Regular</h1>
+      <p class="w3-text-grey"><p>Enjoy the decadent and wholesome Regular Mushroom Chocolate Bar, a delectable treat for all chocolate connoisseurs.<br>
+This chocolate bar is the ideal combination of flavor and health because it is made with premium cocoa and infused with the goodness of mushrooms.<br><br>
+The regular mushroom chocolate bar features a balanced mix of mushrooms and cocoa, providing you with a delightful experience with every bite.<br>
+Whether you're looking for a snack to satisfy your sweet cravings or a healthy pick-me-up, this mushroom chocolate bar is the perfect choice.</p>
     </div>
   </div>
 </div>
