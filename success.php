@@ -108,7 +108,7 @@ You may now close this tab.
 
 
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <h1 class="w3-margin w3-xlarge">Quote of the day: functional mushrooms for life</h1>
+    <h1 class="w3-margin w3-xlarge">Quote of the month: functional mushrooms for life</h1>
 </div>
 
 <!-- Footer -->

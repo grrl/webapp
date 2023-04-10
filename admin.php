@@ -49,7 +49,7 @@ tr:nth-child(even) {
     <a href="order.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Order</a>
     <a href="product.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Products</a>
     <a href="price.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Prices</a>
-    <a href="video.php" class="w3-bar-item w3-button w3-padding-large w3-white">Video</a>
+    <a href="video.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Video</a>
   </div>
 
   <!-- Navbar on small screens -->
@@ -143,7 +143,7 @@ $conn->close();
 </div>
 
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <h1 class="w3-margin w3-xlarge">Quote of the day: functional mushrooms for life</h1>
+    <h1 class="w3-margin w3-xlarge">Quote of the month: functional mushrooms for life</h1>
 </div>
 
 <!-- Footer -->
