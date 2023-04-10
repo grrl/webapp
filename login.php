@@ -1,5 +1,12 @@
 <?php
 
+session_start();
+
+//connect to database
+//$db=mysqli_connect("localhost","root","","mysite");
+if(isset($_SESSION['admin'])){
+    header("location: admin.php");
+}
 
 ?>
 <!DOCTYPE html>

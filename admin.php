@@ -1,8 +1,10 @@
 <?php
+
+session_start();
+
 if(!isset($_SESSION['admin'])){
     //die(header("location: login.php"));
 }
-
 
 ?>
 <!DOCTYPE html>
@@ -63,11 +65,11 @@ tr:nth-child(even) {
 <!-- First Grid -->
 
 <div class="w3-row-padding w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-twothird">
       <h1>Orders</h1>
+      <a href="logout.php">Log Out</a>
+
       <p class="w3-text-grey">
-      <?php
+    <?php
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -129,7 +131,7 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?> 
     </div>
-    <div class="w3-third w3-center">
+<div class="w3-third w3-center">
     
 
     </div>
