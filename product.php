@@ -44,7 +44,7 @@ tr:nth-child(even) {
     <a href="order.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Order</a>
     <a href="product.php" class="w3-bar-item w3-button w3-padding-large w3-white">Products</a>
     <a href="price.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Prices</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Video</a>
+    <a href="video.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Video</a>
   </div>
 
   <!-- Navbar on small screens -->
@@ -66,7 +66,7 @@ tr:nth-child(even) {
       <p>The ExTrA Mushroom Chocolate Bar is a delectable and wholesome treat that has a potent punch for people who want a bigger dose of the positive things that come from mushrooms.<br>
 This chocolate bar is a great option for those wishing to strengthen their immune system and general health because it contains even more mushrooms than our ordinary mushroom chocolate bar.<br><br>
 The ExTrA mushroom chocolate bar is the ideal choice for individuals who want to indulge in something sweet and healthy at the same time because it has a rich, chocolatey flavor with a more pronounced mushroom taste.<br>
-This chocolate bar is the ideal option for a guilt-free snack or a nutritious dessert because it delivers a blast of rich flavors and nutrients with every bite.
+ExTrA chocolate bar is the ideal option for a guilt-free snack or a nutritious dessert because it delivers a blast of rich flavors and nutrients with every bite.
 </p>
     </div>
 
