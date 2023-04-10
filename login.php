@@ -63,6 +63,13 @@ tr:nth-child(even) {
   <div class="w3-content">
     <div class="w3-twothird">
     <h1>Login</h1>
+    <?php
+    if(isset($_SESSION['message']))
+    {
+         echo "<div id='error_msg'>".$_SESSION['message']."</div>";
+         unset($_SESSION['message']);
+    }
+    ?>
     <form method="post" action="auth.php">
   <table>
      <tr>

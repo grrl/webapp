@@ -71,11 +71,64 @@ tr:nth-child(even) {
       </p>
     </div>
     <div class="w3-third w3-center">
-        <video width="320" height="240" controls>
-        <source src="movie.mp4" type="video/mp4">
-        <source src="movie.ogg" type="video/ogg">
-        Your browser does not support the video tag.
-        </video>
+    
+    <?php
+
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $database = "id20561241_kamisama";
+
+        // Create connection
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+        $query = "SELECT * FROM `orders`";
+
+        $result = mysqli_query($conn, $sql);
+
+        echo '<table class="table">';
+        echo '<h2>Orders</h2>';
+        echo '<tr class="table">';
+        echo '<th class="table">orderid</th>';
+        echo '<th class="table">timestamp</th>';
+        echo '<th class="table">ip</th>';
+        echo '<th class="table">device</th>';
+        echo '<th class="table">names</th>';
+        echo '<th class="table">company</th>';
+        echo '<th class="table">country</th>';
+        echo '<th class="table">comment</th>';
+        echo '<th class="table">amountbasic</th>';
+        echo '<th class="table">basictotal</th>';
+        echo '<th class="table">amountspecial</th>';
+        echo '<th class="table">specialtotal</th>';
+        echo '<th class="table">total</th>';
+        echo '</tr>';
+
+        while($row = $result->fetch_row())
+        {
+            echo '<tr class="table">';
+            echo '<th class="table">' . $row['orderid'] . '</th>';
+            echo '<th class="table">' . $row['timestamp'] . '</th>';
+            echo '<th class="table">' . $row['ip'] . '</th>';
+            echo '<th class="table">' . $row['device'] . '</th>'; 
+            echo '<th class="table">' . $row['names'] . '</th>';
+            echo '<th class="table">' . $row['company'] . '</th>';
+            echo '<th class="table">' . $row['country'] . '</th>';
+            echo '<th class="table">' . $row['comment'] . '</th>';
+            echo '<th class="table">' . $row['amountbasic'] . '</th>';
+            echo '<th class="table">' . $row['basictotal'] . '</th>';
+            echo '<th class="table">' . $row['amountspecial'] . '</th>';
+            echo '<th class="table">' . $row['specialtotal'] . '</th>';
+            echo '<th class="table">' . $row['total'] . '</th>';
+            echo '</tr>';
+        }
+        echo '</table>';
+
+        $conn->close();
+    ?>
     </div>
   </div>
 </div>

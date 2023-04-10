@@ -3,14 +3,14 @@ session_start();
 
 if(isset($_SESSION['admin']) )
 {
-  header("location:home.php");
+  header("location:admin.php");
   die();
 }
 //connect to database
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "id20561241_kamisama";
+$dbname = "id20561241_kamisama";
 
 // Create connection
 $db = new mysqli($servername, $username, $password, $dbname);
@@ -41,10 +41,12 @@ if($db)
         }
        else
        {
-              $_SESSION['message']="Username and Password combiation incorrect";
-              header("location:login.php");
+            $_SESSION['message']="Username and Password combiation incorrect";
+            header("location:login.php");
        }
       }
   }
 }
+$db->close();
+
 ?>
