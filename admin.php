@@ -1,7 +1,8 @@
 <?php
 if(!isset($_SESSION['admin'])){
-    die(header("location: login.php"));
+    //die(header("location: login.php"));
 }
+
 
 ?>
 <!DOCTYPE html>
@@ -66,69 +67,68 @@ tr:nth-child(even) {
     <div class="w3-twothird">
       <h1>Video</h1>
       <p class="w3-text-grey">
-      <p>
-      Luonnonvoima product video
-      </p>
+      <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "id20561241_kamisama";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$sql = "SELECT * FROM orders";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    echo "<table><tr>
+    <th>orderid</th>
+    <th>timestamp</th>
+    <th>ip</th>
+    <th>device</th>
+    <th>names</th>
+    <th>company</th>
+    <th>country</th>
+    <th>comment</th>
+    <th>amountbasic</th>
+    <th>basictotal</th>
+    <th>amountspecial</th>
+    <th>specialtotal</th>
+    <th>total</th>
+    </tr>";
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<tr><td>" . 
+        $row["orderid"]. "</td><td>" .
+        $row["timestamp"]. "</td><td>" .
+        $row["ip"]. "</td><td>" .
+        $row["device"]. "</td><td>" .
+        str_replace('9', ',', str_replace('-', ' ', $row['names']))
+        . "</td><td>" .
+        $row["company"]. "</td><td>" .
+        $row["country"]. "</td><td>" .
+        $row["comment"]. "</td><td>" .
+        $row["amountbasic"]. "</td><td>" .
+        $row["basictotal"]. "</td><td>" .
+        $row["amountspecial"]. "</td><td>" .
+        $row["specialtotal"]. "</td><td>" .
+        $row["total"]."</td></tr>";
+    }
+    echo "</table>";
+} else {
+    echo "0 results";
+}
+
+$conn->close();
+?> 
     </div>
     <div class="w3-third w3-center">
     
-    <?php
 
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $database = "id20561241_kamisama";
-
-        // Create connection
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-        $query = "SELECT * FROM `orders`";
-
-        $result = mysqli_query($conn, $sql);
-
-        echo '<table class="table">';
-        echo '<h2>Orders</h2>';
-        echo '<tr class="table">';
-        echo '<th class="table">orderid</th>';
-        echo '<th class="table">timestamp</th>';
-        echo '<th class="table">ip</th>';
-        echo '<th class="table">device</th>';
-        echo '<th class="table">names</th>';
-        echo '<th class="table">company</th>';
-        echo '<th class="table">country</th>';
-        echo '<th class="table">comment</th>';
-        echo '<th class="table">amountbasic</th>';
-        echo '<th class="table">basictotal</th>';
-        echo '<th class="table">amountspecial</th>';
-        echo '<th class="table">specialtotal</th>';
-        echo '<th class="table">total</th>';
-        echo '</tr>';
-
-        while($row = $result->fetch_row())
-        {
-            echo '<tr class="table">';
-            echo '<th class="table">' . $row['orderid'] . '</th>';
-            echo '<th class="table">' . $row['timestamp'] . '</th>';
-            echo '<th class="table">' . $row['ip'] . '</th>';
-            echo '<th class="table">' . $row['device'] . '</th>'; 
-            echo '<th class="table">' . $row['names'] . '</th>';
-            echo '<th class="table">' . $row['company'] . '</th>';
-            echo '<th class="table">' . $row['country'] . '</th>';
-            echo '<th class="table">' . $row['comment'] . '</th>';
-            echo '<th class="table">' . $row['amountbasic'] . '</th>';
-            echo '<th class="table">' . $row['basictotal'] . '</th>';
-            echo '<th class="table">' . $row['amountspecial'] . '</th>';
-            echo '<th class="table">' . $row['specialtotal'] . '</th>';
-            echo '<th class="table">' . $row['total'] . '</th>';
-            echo '</tr>';
-        }
-        echo '</table>';
-
-        $conn->close();
-    ?>
+    </div>
     </div>
   </div>
 </div>
