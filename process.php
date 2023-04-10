@@ -68,10 +68,16 @@ $country = $_POST['countries'];
 $comment = $_POST['comment'];
 
 $servername = "localhost";
+$username = "id20561241_kamisama_user";
+$password = "q~?5g]Z8R|F?5)Rx";
+$dbname = "id20561241_kamisama";
+
+/*
+$servername = "localhost";
 $username = "root";
 $password = "";
 $database = "id20561241_kamisama";
-
+*/
 $conn = new mysqli($servername, $username, $password, $database);
 
 // Check connection

@@ -7,9 +7,15 @@ if(isset($_SESSION['admin']))
   die();
 }
 //connect to database
+/*
 $servername = "localhost";
 $username = "root";
 $password = "";
+$dbname = "id20561241_kamisama";
+*/
+$servername = "localhost";
+$username = "id20561241_kamisama_user";
+$password = "q~?5g]Z8R|F?5)Rx";
 $dbname = "id20561241_kamisama";
 
 // Create connection

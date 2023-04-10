@@ -1,38 +1,5 @@
 <?php
-/*
-$servername = "localhost";
-//$username = "id20561241_kamisama_user";
-//$password = "q~?5g]Z8R|F?5)Rx";
-$username = "root";
-$password = "";
-$database = "id20561241_kamisama";
-// Create connection
-$conn = new mysqli($servername, $username, $password, $database);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-//echo "Connected successfully";
-echo "<script>alert('Success!');</script>";
-*/
 
-/*
-$name = $email = $comment = $website = "";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $name = test_input($_POST["name"]);
-  $email = test_input($_POST["email"]);
-  $website = test_input($_POST["website"]);
-  $comment = test_input($_POST["comment"]);
-}
-
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
-*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
