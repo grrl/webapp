@@ -97,7 +97,7 @@ tr:nth-child(even) {
   </tr>
 </table>
 <br>
-You may now close this tab.
+Thank you for choosing luonnonvoima. You may now close this tab.
     </div>
     <div class="w3-third w3-center">
     <img src="logo.png" width="300" height="300">
