@@ -124,7 +124,7 @@ Sales Manager<br>
       <h5 class="w3-padding-32">We have made our treats even healthier</h5>
       <p class="w3-text-grey"><p>In a world where health-consciousness is on the rise, the chocolate industry has been under increasing pressure to offer healthier options for consumers. In response to this demand, a new product has been introduced: a healthier version of our popular chocolate mushroom bar.</p>
 
-<p>The new chocolate mushroom bar boasts a much healthier recipe and has been reimagined with a dark chocolate base, brown sugar, plant-based milk alternatives. The new recipe has significantly reduced the sugar content while also increasing the nutritional value of the bar.</p>
+<p>With a dark chocolate base, brown sugar, and plant-based milk substitutes, the new chocolate mushroom bar offers a significantly healthier recipe. The sugar level of the bar has been greatly lowered while the nutritious value has increased with the new recipe.</p>
 
 <p>The new chocolate mushroom bar is not only a healthier option for consumers but also maintains its signature delicious taste. With its high-quality ingredients and delicious taste, it's sure to become a new favorite for health-conscious chocolate choice everywhere.</p></p>
     </div>

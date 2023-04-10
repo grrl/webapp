@@ -62,19 +62,11 @@ tr:nth-child(even) {
   <div class="w3-content">
     <div class="w3-twothird">
       <h1>Product 1</h1>
-      <!--
-      <h5 class="w3-padding-32">
-      Are you bored selling the same chocolates that are found in any store? Then come down to Luonnonvoima, we take pleasure in introducing to you our mushroom chocolate snacks. These are unique products that are made from functional mushroom powder ingredients to maintain the health of the body and mind.
-      </h5>
-      -->
-      <p class="w3-text-grey">4-8-2023
-      <p>Dear Customer,<br><br>
-Are you bored selling the same chocolates that are found in any store? Then come down to Luonnonvoima, we take pleasure in introducing to you our mushroom chocolate snacks. These are unique products that are made from functional mushroom powder ingredients to maintain the health of the body and mind.<br><br>
-● Alzheimer's<br>
-● Heart disease<br>
-● Cancer<br>
-● Diabetes</p>
-</p>
+      <p class="w3-text-grey">
+      <p>Enjoy the decadent and wholesome Normal Mushroom Chocolate Bar, a delectable treat for all chocolate connoisseurs.<br>
+This chocolate bar is the ideal combination of flavor and health because it is made with premium cocoa and infused with the goodness of mushrooms.<br><br>
+The regular mushroom chocolate bar features a balanced mix of mushrooms and cocoa, providing you with a delightful experience with every bite.<br>
+Whether you're looking for a snack to satisfy your sweet cravings or a healthy pick-me-up, this mushroom chocolate bar is the perfect choice.
 </p>
     </div>
 
@@ -92,12 +84,10 @@ Are you bored selling the same chocolates that are found in any store? Then come
     </div>
     <div class="w3-twothird">
       <h1>Product 2</h1>
-      <h5 class="w3-padding-32">We have made our treats even healthier</h5>
-      <p class="w3-text-grey"><p>In a world where health-consciousness is on the rise, the chocolate industry has been under increasing pressure to offer healthier options for consumers. In response to this demand, a new product has been introduced: a healthier version of our popular chocolate mushroom bar.</p>
-
-<p>The new chocolate mushroom bar boasts a much healthier recipe and has been reimagined with a dark chocolate base, brown sugar, plant-based milk alternatives. The new recipe has significantly reduced the sugar content while also increasing the nutritional value of the bar.</p>
-
-<p>The new chocolate mushroom bar is not only a healthier option for consumers but also maintains its signature delicious taste. With its high-quality ingredients and delicious taste, it's sure to become a new favorite for health-conscious chocolate choice everywhere.</p></p>
+      <p class="w3-text-grey"><p><p>The Extra Mushroom Chocolate Bar is a delectable and wholesome treat that has a potent punch for people who want a bigger dose of the positive things that come from mushrooms.<br>
+This chocolate bar is a great option for those wishing to strengthen their immune system and general health because it contains even more mushrooms than our ordinary mushroom chocolate bar.<br><br>
+The extra mushroom chocolate bar is the ideal choice for individuals who want to indulge in something sweet and healthy at the same time because it has a rich, chocolatey flavor with a more pronounced mushroom taste.<br>
+This chocolate bar is the ideal option for a guilt-free snack or a nutritious dessert because it delivers a blast of rich flavors and nutrients with every bite.</p>
     </div>
   </div>
 </div>
