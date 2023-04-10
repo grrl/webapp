@@ -81,7 +81,7 @@ ExTrA chocolate bar is the ideal option for a guilt-free snack or a nutritious d
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-third w3-center">
-        <img src="regular.png">
+        <img src="regular.png" height="220" width="204">
     </div>
     <div class="w3-twothird">
       <h1>Classic Regular</h1>
