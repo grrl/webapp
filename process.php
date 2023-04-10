@@ -9,6 +9,7 @@ $time_stamp = date_timestamp_get($date);
 $ip_address = $_SERVER['REMOTE_ADDR'];
 //echo " x ";
 //echo $ip_address;
+
 $_SESSION['username'] = $ip_address;
 
 $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile")); 
