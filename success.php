@@ -100,7 +100,7 @@ tr:nth-child(even) {
 You may now close this tab.
     </div>
     <div class="w3-third w3-center">
-      <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
+    <img src="logo.png" width="300" height="300">
     </div>
   </div>
 </div>
