@@ -44,7 +44,7 @@ tr:nth-child(even) {
     <a href="order.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Order</a>
     <a href="product.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Products</a>
     <a href="price.php" class="w3-bar-item w3-button w3-padding-large w3-white">Prices</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Video</a>
+    <a href="video.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Video</a>
   </div>
 
   <!-- Navbar on small screens -->
@@ -61,22 +61,19 @@ tr:nth-child(even) {
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-twothird">
-      <h1>Ordering options</h1>
+      <h1>Video</h1>
       <p class="w3-text-grey">
       <p>
-      <b>Regular</b><br>
-      ● 10 boxes<br>
-      ● 30g*24 bars<br>
-      ● In total 240 delicious luonnonvoima bars in one box<br>
-      <br>
-      <b>Special</b><br>
-      ● 10 boxes<br>
-      ● 30g*24 bars<br>
-      ● In total 240 delicious luonnonvoima special bars in one box
-    </p>
+      Luonnonvoima product video
+      </p>
     </div>
     <div class="w3-third w3-center">
-      <img src="products.png">
+        <video width="320" height="240" controls>
+        <source src="movie.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+</video>
+
     </div>
   </div>
 </div>
