@@ -69,6 +69,8 @@ tr:nth-child(even) {
       <a href="logout.php">Log Out</a>
 
       <p class="w3-text-grey">
+      <div style="overflow-x:auto;">
+
     <?php
 $servername = "localhost";
 $username = "root";
@@ -129,8 +131,9 @@ if ($result->num_rows > 0) {
 }
 
 $conn->close();
-?> 
-    </div>
+?>
+
+</div>
 <div class="w3-third w3-center">
     
 
