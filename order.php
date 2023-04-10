@@ -399,6 +399,7 @@ $.ajax({
     </div>
 
     <div class="w3-third w3-center">
+      <img src="logo.png" width="300" height="300">
       <!--<img src="https://t3.ftcdn.net/jpg/01/73/71/14/360_F_173711487_qbRZkGHv1AD0y14x0jmV12F8G1dxcUbJ.jpg">-->
       <!--<i class="fa fa-anchor w3-padding-64 w3-text-red"></i>-->
     </div>
