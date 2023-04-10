@@ -127,8 +127,11 @@ function clean($string) {
 $group = str_replace(' ', '-', $group);
 $group = str_replace(',', '9', $group);
 $group = preg_replace('/[^A-Za-z0-9\-]/', '', $group);
+$company = str_replace(' ', '-', $company);
 $company = clean($company);
+$country = str_replace(' ', '-', $country);
 $country = clean($country);
+$comment = str_replace(' ', '-', $comment);
 $comment = clean($comment);
 $regular = clean($regular);
 $special = clean($special);

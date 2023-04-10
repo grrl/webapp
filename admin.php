@@ -65,7 +65,7 @@ tr:nth-child(even) {
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-twothird">
-      <h1>Video</h1>
+      <h1>Orders</h1>
       <p class="w3-text-grey">
       <?php
 $servername = "localhost";
@@ -87,7 +87,7 @@ if ($result->num_rows > 0) {
     echo "<table><tr>
     <th>orderid</th>
     <th>timestamp</th>
-    <th>ip</th>
+    <th>location</th>
     <th>device</th>
     <th>names</th>
     <th>company</th>
@@ -103,14 +103,18 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         echo "<tr><td>" . 
         $row["orderid"]. "</td><td>" .
-        $row["timestamp"]. "</td><td>" .
+        date('m/d/Y H:i:s', $row["timestamp"])
+        . "</td><td>" .
         $row["ip"]. "</td><td>" .
         $row["device"]. "</td><td>" .
         str_replace('9', ',', str_replace('-', ' ', $row['names']))
         . "</td><td>" .
-        $row["company"]. "</td><td>" .
-        $row["country"]. "</td><td>" .
-        $row["comment"]. "</td><td>" .
+        str_replace('-', ' ', $row["company"])
+        . "</td><td>" .
+        str_replace('-', ' ', $row["country"])
+        . "</td><td>" .
+        str_replace('-', ' ', $row["comment"])
+        . "</td><td>" .
         $row["amountbasic"]. "</td><td>" .
         $row["basictotal"]. "</td><td>" .
         $row["amountspecial"]. "</td><td>" .
@@ -140,12 +144,8 @@ $conn->close();
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity">  
   <div class="w3-xlarge w3-padding-32">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <a href="https://www.facebook.com/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+
  </div>
  <!--<p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>-->
 </footer>
