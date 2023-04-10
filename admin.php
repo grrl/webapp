@@ -1,5 +1,7 @@
 <?php
-
+if(!isset($_SESSION['admin'])){
+    die(header("location: login.php"));
+}
 
 ?>
 <!DOCTYPE html>
