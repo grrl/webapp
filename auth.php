@@ -14,9 +14,9 @@ $password = "";
 $dbname = "id20561241_kamisama";
 */
 $servername = "localhost";
-$username = "id20561241_kamisama_user";
+$username = "u722548033_kamisama_user";
 $password = "q~?5g]Z8R|F?5)Rx";
-$dbname = "id20561241_kamisama";
+$dbname = "u722548033_kamisama";
 
 // Create connection
 $db = new mysqli($servername, $username, $password, $dbname);

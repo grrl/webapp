@@ -69,9 +69,9 @@ $country = $_POST['countries'];
 $comment = $_POST['comment'];
 
 $servername = "localhost";
-$username = "id20561241_kamisama_user";
+$username = "u722548033_kamisama_user";
 $password = "q~?5g]Z8R|F?5)Rx";
-$database = "id20561241_kamisama";
+$database = "u722548033_kamisama";
 
 /*
 $servername = "localhost";
