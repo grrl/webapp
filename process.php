@@ -56,11 +56,11 @@ $regular = $_POST['regular'];
 $special = $_POST['special'];
 
 if (empty($regular) && empty($special)){
-    header("Location: index.php");
+    header("Location: index");
 }
 
 if(!isset($_SESSION['username'])){
-   die(header("location: 404.php"));
+   die(header("location: 404"));
 }
 
 $group = $_POST['group'];
@@ -177,6 +177,6 @@ $_SESSION['total'] = $total;
 //$_SESSION['username']=$username;
 $conn->close();
 
-header("Location: success.php");
+header("Location: success");
 
 ?>
