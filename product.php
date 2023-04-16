@@ -40,20 +40,20 @@ tr:nth-child(even) {
 <div class="w3-top">
   <div class="w3-bar w3-sand w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="index.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
-    <a href="order.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Order</a>
-    <a href="product.php" class="w3-bar-item w3-button w3-padding-large w3-white">Products</a>
-    <a href="price.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Prices</a>
-    <a href="video.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Video</a>
+    <a href="index" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
+    <a href="order" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Order</a>
+    <a href="product" class="w3-bar-item w3-button w3-padding-large w3-white">Products</a>
+    <a href="price" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Prices</a>
+    <a href="video" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Video</a>
   </div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-  <a href="index.php" class="w3-bar-item w3-button w3-padding-large">Home</a>
-    <a href="order.php" class="w3-bar-item w3-button w3-padding-large">Order</a>
-    <a href="product.php" class="w3-bar-item w3-button w3-padding-large">Products</a>
-    <a href="price.php" class="w3-bar-item w3-button w3-padding-large">Prices</a>
-    <a href="video.php" class="w3-bar-item w3-button w3-padding-large">Video</a>
+  <a href="index" class="w3-bar-item w3-button w3-padding-large">Home</a>
+    <a href="order" class="w3-bar-item w3-button w3-padding-large">Order</a>
+    <a href="product" class="w3-bar-item w3-button w3-padding-large">Products</a>
+    <a href="price" class="w3-bar-item w3-button w3-padding-large">Prices</a>
+    <a href="video" class="w3-bar-item w3-button w3-padding-large">Video</a>
   </div>
 </div>
 
