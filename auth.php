@@ -43,12 +43,12 @@ if($db)
             $_SESSION['message']="You are now logged in.";
             $_SESSION['admin']=$username;
             //$_SESSION['id']= $id;
-            header("location:admin.php");
+            header("location:admin");
         }
        else
        {
             $_SESSION['message']="Username and Password combination incorrect";
-            header("location:login.php");
+            header("location:login");
        }
       }
   }

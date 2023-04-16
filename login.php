@@ -76,7 +76,7 @@ td, th {
     }
     ?>
     </p>
-   <form method="post" action="auth.php">
+   <form method="post" action="auth">
   <table>
      <tr>
            <td>Username : </td>

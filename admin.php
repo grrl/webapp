@@ -66,7 +66,7 @@ tr:nth-child(even) {
 
 <div class="w3-row-padding w3-padding-64 w3-container">
       <h1>Orders</h1>
-      <a href="logout.php">Log Out</a>
+      <a href="logout">Log Out</a>
 
       <p class="w3-text-grey">
       <div style="overflow-x:auto;">
