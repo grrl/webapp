@@ -360,7 +360,7 @@ $.ajax({
   </tr>
 </table>
 <br>
-<input type="submit" id="placeorder" name="submit" value="Place order">  
+<input type="submit" id="placeorder" name="submit" style="margin-left:250px;" value="Place order">  
 </form>
       <p class="w3-text-grey">No refunds. All sales are final.</p>
     </div>
